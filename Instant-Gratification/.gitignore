@@ -1,0 +1,14 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 데이터 (train/test 각 ~1.3GB, kagglehub 캐시로 관리)
+data/raw/
+data/data_path.txt
+
+# 실험 산출물 중 용량이 큰 것 (metrics.json / run 로그는 커밋한다)
+experiments/**/outputs/*.npy
+experiments/**/outputs/*.csv

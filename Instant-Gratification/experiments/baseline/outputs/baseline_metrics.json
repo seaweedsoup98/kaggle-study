@@ -1,0 +1,91 @@
+{
+  "config": {
+    "magic_limit": 512,
+    "n_splits": 5,
+    "meta_seeds": 4,
+    "meta_folds": 5,
+    "meta_boost_rounds": 100,
+    "first_level_configs": [
+      {
+        "gmm_init_params": "kmeans",
+        "random_state": 1
+      },
+      {
+        "gmm_init_params": "kmeans",
+        "random_state": 2
+      },
+      {
+        "gmm_init_params": "random",
+        "random_state": 1
+      },
+      {
+        "gmm_init_params": "random",
+        "random_state": 2
+      }
+    ],
+    "models": [
+      "nusvc_deg4",
+      "nusvc_deg2",
+      "qda",
+      "svc_deg4",
+      "knn16",
+      "logreg_l1"
+    ]
+  },
+  "level1": {
+    "kmeans_seed1": {
+      "nusvc_deg4": 0.9490310069524287,
+      "nusvc_deg2": 0.9483173107418434,
+      "qda": 0.9490644878826664,
+      "svc_deg4": 0.9489953482989673,
+      "knn16": 0.948932071041646,
+      "logreg_l1": 0.938393079383605,
+      "mean_of_models": 0.9493423275136024,
+      "elapsed_sec": 530.1
+    },
+    "kmeans_seed2": {
+      "nusvc_deg4": 0.9487995638332317,
+      "nusvc_deg2": 0.9479397629881888,
+      "qda": 0.9489387040665606,
+      "svc_deg4": 0.9487952631019851,
+      "knn16": 0.9488747813444856,
+      "logreg_l1": 0.9386364520756286,
+      "mean_of_models": 0.9492911756105762,
+      "elapsed_sec": 535.1
+    },
+    "random_seed1": {
+      "nusvc_deg4": 0.9483910154068819,
+      "nusvc_deg2": 0.9479083383017866,
+      "qda": 0.9483350125646925,
+      "svc_deg4": 0.9483510852715236,
+      "knn16": 0.9480985891398059,
+      "logreg_l1": 0.9379024259080887,
+      "mean_of_models": 0.9484993709761457,
+      "elapsed_sec": 634.4
+    },
+    "random_seed2": {
+      "nusvc_deg4": 0.9482949173233036,
+      "nusvc_deg2": 0.9475867306424625,
+      "qda": 0.948530536842183,
+      "svc_deg4": 0.9481831511925541,
+      "knn16": 0.948014808175662,
+      "logreg_l1": 0.9377235270191714,
+      "mean_of_models": 0.9483809012727966,
+      "elapsed_sec": 633.7
+    }
+  },
+  "level1_ensemble_auc": 0.949604001101723,
+  "level2": {
+    "lgbm_auc": 0.9495550173176566,
+    "mlp_auc": 0.9499631329991503
+  },
+  "final_auc": 0.9496047663578433,
+  "elapsed_sec": 2616.7,
+  "outputs": {
+    "submission": "baseline_submission.csv",
+    "oof_train_level1": "baseline_oof_train_level1.npy",
+    "oof_test_level1": "baseline_oof_test_level1.npy",
+    "oof_train_final": "baseline_oof_train_final.npy",
+    "oof_test_final": "baseline_oof_test_final.npy"
+  }
+}
