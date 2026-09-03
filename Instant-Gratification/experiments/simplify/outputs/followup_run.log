@@ -1,0 +1,21 @@
+[simp] loading data ...
+[simp] groups=512 train_rows=262144 useful_cols mean=39.7
+[simp] reference: baseline final=0.949605  qda single(kmeans,s1)=0.949064  qda 4-config avg=0.949259
+[simp] configs=8 phase=followup
+[simp] full_ts_s2               pooled=0.949119 group_mean=0.945401 dim=69 fits/grp=9 vs_probe=  ---   vs_final=-0.00199 [-0.00264,-0.00134] (127.4s)
+[simp] full_ts_s3               pooled=0.949383 group_mean=0.945795 dim=69 fits/grp=9 vs_probe=  ---   vs_final=-0.00159 [-0.00227,-0.00092] (127.6s)
+[simp] full_ts_s4               pooled=0.948498 group_mean=0.945045 dim=69 fits/grp=9 vs_probe=  ---   vs_final=-0.00234 [-0.00303,-0.00166] (131.4s)
+[simp] full_ts_reg0.3_s1        pooled=0.949547 group_mean=0.945668 dim=69 fits/grp=9 vs_probe=  ---   vs_final=-0.00172 [-0.00231,-0.00113] (134.7s)
+[simp] lean_s1                  pooled=0.949546 group_mean=0.946770 dim=45 fits/grp=8 vs_probe=  ---   vs_final=-0.00062 [-0.00118,-0.00006] (126.8s)
+[simp] lean_s2                  pooled=0.949191 group_mean=0.946179 dim=45 fits/grp=8 vs_probe=  ---   vs_final=-0.00121 [-0.00183,-0.00059] (127.5s)
+[simp] lean_s3                  pooled=0.949435 group_mean=0.946496 dim=45 fits/grp=8 vs_probe=  ---   vs_final=-0.00089 [-0.00155,-0.00023] (127.4s)
+[simp] lean_s4                  pooled=0.948469 group_mean=0.945662 dim=45 fits/grp=8 vs_probe=  ---   vs_final=-0.00173 [-0.00238,-0.00107] (127.7s)
+[simp] COMBO minimal_4seeds         pooled=0.949315 members=4 vs_final=+0.00036 [-0.00026,+0.00098] wins=259/512
+[simp] COMBO minimal_5k             pooled=0.949329 members=5 vs_final=+0.00103 [+0.00042,+0.00163] wins=282/512
+[simp] COMBO minimal_5k_x2seeds     pooled=0.949329 members=10 vs_final=+0.00133 [+0.00072,+0.00194] wins=284/512
+[simp] COMBO full_ts_4seeds         pooled=0.949763 members=4 vs_final=+0.00003 [-0.00051,+0.00058] wins=260/512
+[simp] COMBO lean_4seeds            pooled=0.949699 members=4 vs_final=+0.00052 [-0.00001,+0.00106] wins=271/512
+[simp] COMBO full_ts_2seeds         pooled=0.949769 members=2 vs_final=-0.00081 [-0.00134,-0.00029] wins=233/512
+[simp] COMBO lean_2seeds            pooled=0.949684 members=2 vs_final=-0.00011 [-0.00062,+0.00040] wins=251/512
+[simp] BEST SIMPLE: lean_2seeds pooled=0.949684 fits/grp=16 (>= baseline final)
+[simp] done in 1053.5s

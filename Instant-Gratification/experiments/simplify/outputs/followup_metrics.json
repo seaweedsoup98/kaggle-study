@@ -1,0 +1,526 @@
+{
+  "config": {
+    "magic_limit": 512,
+    "n_splits": 5,
+    "phase": "followup",
+    "probe_model": "qda"
+  },
+  "reference": {
+    "baseline_final_auc": 0.9496047663578433,
+    "baseline_qda_single_kmeans_s1": 0.9490644878826664,
+    "baseline_qda_avg4": 0.9492585439010098
+  },
+  "results": {
+    "full_ts_s2": {
+      "pooled_auc": 0.949119488010582,
+      "elapsed_sec": 127.4,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.0019878669726660705,
+        "ci_low": -0.002637670432806567,
+        "ci_high": -0.001338063512525574,
+        "wins": 205,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.002060465087076485,
+        "ci_low": -0.0026599052627724806,
+        "ci_high": -0.0014610249113804893,
+        "wins": 196,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "full_ts_s2",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 2,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9454013213590791
+    },
+    "full_ts_s3": {
+      "pooled_auc": 0.9493829161231269,
+      "elapsed_sec": 127.6,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.0015937222004685674,
+        "ci_low": -0.002266508246192484,
+        "ci_high": -0.000920936154744651,
+        "wins": 223,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0016663203148789818,
+        "ci_low": -0.002283891414312132,
+        "ci_high": -0.0010487492154458318,
+        "wins": 210,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "full_ts_s3",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 3,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9457954661312765
+    },
+    "full_ts_s4": {
+      "pooled_auc": 0.9484981383998184,
+      "elapsed_sec": 131.4,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.0023439386769566932,
+        "ci_low": -0.0030280274791438695,
+        "ci_high": -0.001659849874769517,
+        "wins": 188,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0024165367913671076,
+        "ci_low": -0.003051145524372782,
+        "ci_high": -0.0017819280583614332,
+        "wins": 192,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "full_ts_s4",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 4,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9450452496547883
+    },
+    "full_ts_reg0.3_s1": {
+      "pooled_auc": 0.9495469826231595,
+      "elapsed_sec": 134.7,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.0017211449719398504,
+        "ci_low": -0.002309289766191428,
+        "ci_high": -0.0011330001776882728,
+        "wins": 200,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0017937430863502648,
+        "ci_low": -0.0023480795837149335,
+        "ci_high": -0.0012394065889855962,
+        "wins": 200,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "full_ts_reg0.3_s1",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.3,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9456680433598053
+    },
+    "lean_s1": {
+      "pooled_auc": 0.9495458618928531,
+      "elapsed_sec": 126.8,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.0006192926453133527,
+        "ci_low": -0.001182913419201266,
+        "ci_high": -5.567187142543949e-05,
+        "wins": 240,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0006918907597237671,
+        "ci_low": -0.0011983368434659858,
+        "ci_high": -0.0001854446759815485,
+        "wins": 224,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "lean_s1",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9467698956864317
+    },
+    "lean_s2": {
+      "pooled_auc": 0.9491905064793731,
+      "elapsed_sec": 127.5,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.0012102314403018306,
+        "ci_low": -0.0018320083374292447,
+        "ci_high": -0.0005884545431744164,
+        "wins": 218,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.001282829554712245,
+        "ci_low": -0.0018438612442327647,
+        "ci_high": -0.0007217978651917254,
+        "wins": 211,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "lean_s2",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 2,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9461789568914432
+    },
+    "lean_s3": {
+      "pooled_auc": 0.9494345813886201,
+      "elapsed_sec": 127.4,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.0008932427133261441,
+        "ci_low": -0.001552524774231203,
+        "ci_high": -0.00023396065242108522,
+        "wins": 227,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0009658408277365585,
+        "ci_low": -0.001554806092923459,
+        "ci_high": -0.00037687556254965783,
+        "wins": 232,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "lean_s3",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 3,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9464959456184188
+    },
+    "lean_s4": {
+      "pooled_auc": 0.9484687601201569,
+      "elapsed_sec": 127.7,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": null,
+      "vs_baseline_final": {
+        "mean": -0.001727583788527779,
+        "ci_low": -0.0023816475437188605,
+        "ci_high": -0.0010735200333366977,
+        "wins": 207,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0018001819029381935,
+        "ci_low": -0.002392037781126329,
+        "ci_high": -0.001208326024750058,
+        "wins": 195,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "lean_s4",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 4,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "followup"
+      },
+      "group_auc_mean": 0.9456616045432173
+    }
+  },
+  "combos": {
+    "minimal_4seeds": {
+      "members": [
+        "minimal",
+        "minimal_k5_s2",
+        "minimal_k5_s3",
+        "minimal_k5_s4"
+      ],
+      "note": "minimal, GMM seed 4개 평균 (k=5)",
+      "pooled_auc": 0.9493152244841009,
+      "group_auc_mean": 0.9477493890347823,
+      "vs_baseline_final": {
+        "mean": 0.00036020070303727355,
+        "ci_low": -0.0002562898873005005,
+        "ci_high": 0.0009766912933750476,
+        "wins": 259,
+        "n": 512,
+        "significant": false
+      },
+      "elapsed_sec": 231.1,
+      "fits_per_group": 28.0
+    },
+    "minimal_5k": {
+      "members": [
+        "minimal_k3_s1",
+        "minimal_k4_s1",
+        "minimal",
+        "minimal_k6_s1",
+        "minimal_k7_s1"
+      ],
+      "note": "minimal, k=3..7 평균 (seed 1)",
+      "pooled_auc": 0.9493286437364937,
+      "group_auc_mean": 0.9484169755529855,
+      "vs_baseline_final": {
+        "mean": 0.0010277872212405353,
+        "ci_low": 0.00042444903211892994,
+        "ci_high": 0.0016311254103621407,
+        "wins": 282,
+        "n": 512,
+        "significant": true
+      },
+      "elapsed_sec": 296.5,
+      "fits_per_group": 35.0
+    },
+    "minimal_5k_x2seeds": {
+      "members": [
+        "minimal_k3_s1",
+        "minimal_k4_s1",
+        "minimal",
+        "minimal_k6_s1",
+        "minimal_k7_s1",
+        "minimal_k3_s2",
+        "minimal_k4_s2",
+        "minimal_k5_s2",
+        "minimal_k6_s2",
+        "minimal_k7_s2"
+      ],
+      "note": "minimal, k=3..7 x seed 2개 = 10개 평균",
+      "pooled_auc": 0.9493288456879739,
+      "group_auc_mean": 0.9487188752400875,
+      "vs_baseline_final": {
+        "mean": 0.0013296869083424148,
+        "ci_low": 0.0007220347499601857,
+        "ci_high": 0.0019373390667246438,
+        "wins": 284,
+        "n": 512,
+        "significant": true
+      },
+      "elapsed_sec": 594.2,
+      "fits_per_group": 70.0
+    },
+    "full_ts_4seeds": {
+      "members": [
+        "-gmm_stratify",
+        "full_ts_s2",
+        "full_ts_s3",
+        "full_ts_s4"
+      ],
+      "note": "baseline 피처, target stratify, QDA, GMM 시드 4개 평균",
+      "pooled_auc": 0.9497634639869449,
+      "group_auc_mean": 0.9474229389122266,
+      "vs_baseline_final": {
+        "mean": 3.375058048164857e-05,
+        "ci_low": -0.00051196081993955,
+        "ci_high": 0.0005794619809028471,
+        "wins": 260,
+        "n": 512,
+        "significant": false
+      },
+      "elapsed_sec": 513.1,
+      "fits_per_group": 36.0
+    },
+    "lean_4seeds": {
+      "members": [
+        "lean_s1",
+        "lean_s2",
+        "lean_s3",
+        "lean_s4"
+      ],
+      "note": "kpca + GMM proba x1 + scaler, target stratify, QDA, 시드 4개 평균",
+      "pooled_auc": 0.9496986067990791,
+      "group_auc_mean": 0.9479129900494272,
+      "vs_baseline_final": {
+        "mean": 0.0005238017176821333,
+        "ci_low": -1.0126935278940508e-05,
+        "ci_high": 0.001057730370643207,
+        "wins": 271,
+        "n": 512,
+        "significant": false
+      },
+      "elapsed_sec": 509.4,
+      "fits_per_group": 32.0
+    },
+    "full_ts_2seeds": {
+      "members": [
+        "-gmm_stratify",
+        "full_ts_s2"
+      ],
+      "note": "full_ts 시드 2개 평균",
+      "pooled_auc": 0.949769176894257,
+      "group_auc_mean": 0.9465744603442465,
+      "vs_baseline_final": {
+        "mean": -0.0008147279874984967,
+        "ci_low": -0.0013392261128233247,
+        "ci_high": -0.00029022986217366875,
+        "wins": 233,
+        "n": 512,
+        "significant": true
+      },
+      "elapsed_sec": 254.1,
+      "fits_per_group": 18.0
+    },
+    "lean_2seeds": {
+      "members": [
+        "lean_s1",
+        "lean_s2"
+      ],
+      "note": "lean 시드 2개 평균",
+      "pooled_auc": 0.9496835117190198,
+      "group_auc_mean": 0.9472820725389385,
+      "vs_baseline_final": {
+        "mean": -0.00010711579280656917,
+        "ci_low": -0.0006178442928926617,
+        "ci_high": 0.0004036127072795234,
+        "wins": 251,
+        "n": 512,
+        "significant": false
+      },
+      "elapsed_sec": 254.3,
+      "fits_per_group": 16.0
+    }
+  },
+  "stack": null,
+  "best_simple": {
+    "name": "lean_2seeds",
+    "pooled_auc": 0.9496835117190198,
+    "fits_per_group": 16.0,
+    "vs_baseline_final": {
+      "mean": -0.00010711579280656917,
+      "ci_low": -0.0006178442928926617,
+      "ci_high": 0.0004036127072795234,
+      "wins": 251,
+      "n": 512,
+      "significant": false
+    }
+  },
+  "elapsed_sec": 1053.5
+}

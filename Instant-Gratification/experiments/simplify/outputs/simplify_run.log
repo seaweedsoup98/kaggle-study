@@ -1,0 +1,44 @@
+[simp] loading data ...
+[simp] groups=512 train_rows=262144 useful_cols mean=39.7
+[simp] reference: baseline final=0.949605  qda single(kmeans,s1)=0.949064  qda 4-config avg=0.949259
+[simp] configs=32 phase=all
+[simp] REPRODUCTION CHECK: probe=0.9490644878826664 baseline=0.9490644878826664 |diff|=0.00e+00 -> OK (bit-level)
+[simp] baseline_probe           pooled=0.949064 group_mean=0.945654 dim=69 fits/grp=9 vs_probe=+0.00000 vs_final=-0.00174 [-0.00232,-0.00115] (126.6s)
+[simp] -kpca                    pooled=0.948687 group_mean=0.945348 dim=69 fits/grp=8 vs_probe=-0.00031 vs_final=-0.00204 [-0.00273,-0.00135] (67.8s)
+[simp] -gmm_score               pooled=0.949049 group_mean=0.945593 dim=66 fits/grp=9 vs_probe=-0.00006 vs_final=-0.00180 [-0.00239,-0.00120] (125.4s)
+[simp] -hist                    pooled=0.949109 group_mean=0.945662 dim=68 fits/grp=8 vs_probe=+0.00001 vs_final=-0.00173 [-0.00232,-0.00114] (124.7s)
+[simp] -scaler                  pooled=0.944537 group_mean=0.937830 dim=69 fits/grp=8 vs_probe=-0.00782 vs_final=-0.00956 [-0.01046,-0.00866] (126.4s)
+[simp] -gmm_stratify            pooled=0.949547 group_mean=0.946138 dim=69 fits/grp=9 vs_probe=+0.00048 vs_final=-0.00125 [-0.00183,-0.00067] (126.7s)
+[simp] -repeat                  pooled=0.949143 group_mean=0.946362 dim=47 fits/grp=9 vs_probe=+0.00071 vs_final=-0.00103 [-0.00159,-0.00046] (120.9s)
+[simp] -gmm                     pooled=0.935036 group_mean=0.934589 dim=41 fits/grp=8 vs_probe=-0.01106 vs_final=-0.01280 [-0.01361,-0.01199] (70.1s)
+[simp] -transductive            pooled=0.930463 group_mean=0.930000 dim=69 fits/grp=9 vs_probe=-0.01565 vs_final=-0.01739 [-0.01825,-0.01653] (77.3s)
+[simp] minimal                  pooled=0.948748 group_mean=0.946149 dim=45 fits/grp=7 vs_probe=+0.00049 vs_final=-0.00124 [-0.00191,-0.00057] (57.7s)
+[simp] minimal_diag             pooled=0.932322 group_mean=0.931926 dim=45 fits/grp=7 vs_probe=-0.01373 vs_final=-0.01546 [-0.01630,-0.01463] (21.9s)
+[simp] minimal_-transductive    pooled=0.932105 group_mean=0.931679 dim=45 fits/grp=7 vs_probe=-0.01397 vs_final=-0.01571 [-0.01657,-0.01485] (44.4s)
+[simp] minimal_-gmm_stratify    pooled=0.949013 group_mean=0.946474 dim=45 fits/grp=7 vs_probe=+0.00082 vs_final=-0.00091 [-0.00158,-0.00025] (58.0s)
+[simp] minimal_reg0.05          pooled=0.948703 group_mean=0.945802 dim=45 fits/grp=7 vs_probe=+0.00015 vs_final=-0.00159 [-0.00227,-0.00090] (58.0s)
+[simp] minimal_reg0.3           pooled=0.948780 group_mean=0.947082 dim=45 fits/grp=7 vs_probe=+0.00143 vs_final=-0.00031 [-0.00095,+0.00034] (58.4s)
+[simp] minimal_reg0.5           pooled=0.948664 group_mean=0.947274 dim=45 fits/grp=7 vs_probe=+0.00162 vs_final=-0.00012 [-0.00075,+0.00052] (57.6s)
+[simp] raw_qda                  pooled=0.936587 group_mean=0.936119 dim=40 fits/grp=6 vs_probe=-0.00953 vs_final=-0.01127 [-0.01208,-0.01046] (7.0s)
+[simp] raw_qda_reg0.5           pooled=0.933109 group_mean=0.932638 dim=40 fits/grp=6 vs_probe=-0.01302 vs_final=-0.01475 [-0.01559,-0.01391] (7.1s)
+[simp] gmm_bayes_k1             pooled=0.936517 group_mean=0.936051 dim=40 fits/grp=6 vs_probe=-0.00960 vs_final=-0.01134 [-0.01215,-0.01052] (30.1s)
+[simp] gmm_bayes_k2             pooled=0.935744 group_mean=0.935321 dim=40 fits/grp=6 vs_probe=-0.01033 vs_final=-0.01207 [-0.01291,-0.01122] (86.5s)
+[simp] gmm_bayes_k3             pooled=0.928997 group_mean=0.928753 dim=40 fits/grp=6 vs_probe=-0.01690 vs_final=-0.01864 [-0.01965,-0.01763] (83.3s)
+[simp] minimal_k3_s1            pooled=0.943690 group_mean=0.942571 dim=43 fits/grp=7 vs_probe=-0.00308 vs_final=-0.00482 [-0.00551,-0.00413] (46.7s)
+[simp] minimal_k3_s2            pooled=0.943491 group_mean=0.942278 dim=43 fits/grp=7 vs_probe=-0.00338 vs_final=-0.00511 [-0.00577,-0.00445] (46.8s)
+[simp] minimal_k4_s1            pooled=0.947026 group_mean=0.945138 dim=44 fits/grp=7 vs_probe=-0.00052 vs_final=-0.00225 [-0.00288,-0.00162] (52.7s)
+[simp] minimal_k4_s2            pooled=0.947432 group_mean=0.945507 dim=44 fits/grp=7 vs_probe=-0.00015 vs_final=-0.00188 [-0.00253,-0.00124] (52.3s)
+[simp] minimal_k5_s2            pooled=0.948935 group_mean=0.946397 dim=45 fits/grp=7 vs_probe=+0.00074 vs_final=-0.00099 [-0.00168,-0.00031] (58.0s)
+[simp] minimal_k5_s3            pooled=0.948893 group_mean=0.946221 dim=45 fits/grp=7 vs_probe=+0.00057 vs_final=-0.00117 [-0.00184,-0.00049] (58.2s)
+[simp] minimal_k5_s4            pooled=0.948836 group_mean=0.946058 dim=45 fits/grp=7 vs_probe=+0.00040 vs_final=-0.00133 [-0.00200,-0.00067] (57.2s)
+[simp] minimal_k6_s1            pooled=0.948521 group_mean=0.945339 dim=46 fits/grp=7 vs_probe=-0.00031 vs_final=-0.00205 [-0.00272,-0.00138] (64.3s)
+[simp] minimal_k6_s2            pooled=0.948505 group_mean=0.945491 dim=46 fits/grp=7 vs_probe=-0.00016 vs_final=-0.00190 [-0.00259,-0.00120] (64.4s)
+[simp] minimal_k7_s1            pooled=0.947879 group_mean=0.944735 dim=47 fits/grp=7 vs_probe=-0.00092 vs_final=-0.00265 [-0.00336,-0.00195] (75.1s)
+[simp] minimal_k7_s2            pooled=0.947808 group_mean=0.944756 dim=47 fits/grp=7 vs_probe=-0.00090 vs_final=-0.00263 [-0.00333,-0.00193] (76.2s)
+[simp] COMBO minimal_4seeds         pooled=0.949315 members=4 vs_final=+0.00036 [-0.00026,+0.00098] wins=259/512
+[simp] COMBO minimal_5k             pooled=0.949329 members=5 vs_final=+0.00103 [+0.00042,+0.00163] wins=282/512
+[simp] COMBO minimal_5k_x2seeds     pooled=0.949329 members=10 vs_final=+0.00133 [+0.00072,+0.00194] wins=284/512
+[simp] COMBO minimal_all            pooled=0.949368 members=12 vs_final=+0.00138 [+0.00078,+0.00198] wins=289/512
+[simp] STACK  logreg over 12 minimal cols: pooled=0.949448 vs_final=+0.00212
+[simp] BEST SIMPLE: -gmm_stratify pooled=0.949547 fits/grp=9 (below baseline final)
+[simp] done in 2210.5s

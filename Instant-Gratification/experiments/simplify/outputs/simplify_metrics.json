@@ -1,0 +1,1755 @@
+{
+  "config": {
+    "magic_limit": 512,
+    "n_splits": 5,
+    "phase": "all",
+    "probe_model": "qda"
+  },
+  "reference": {
+    "baseline_final_auc": 0.9496047663578433,
+    "baseline_qda_single_kmeans_s1": 0.9490644878826664,
+    "baseline_qda_avg4": 0.9492585439010098
+  },
+  "results": {
+    "baseline_probe": {
+      "pooled_auc": 0.9490644878826664,
+      "elapsed_sec": 126.6,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "wins": 0,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.001735607371354114,
+        "ci_low": -0.0023224745544035757,
+        "ci_high": -0.0011487401883046521,
+        "wins": 201,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0018082054857645284,
+        "ci_low": -0.0023398112474450174,
+        "ci_high": -0.0012765997240840393,
+        "wins": 187,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "baseline_probe",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.9456535809603909
+    },
+    "-kpca": {
+      "pooled_auc": 0.9486869869279712,
+      "elapsed_sec": 67.8,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": {
+        "mean": -0.00030605381851132396,
+        "ci_low": -0.0009330297258206766,
+        "ci_high": 0.0003209220887980287,
+        "wins": 255,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.0020416611898654378,
+        "ci_low": -0.0027340404594314986,
+        "ci_high": -0.001349281920299377,
+        "wins": 194,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.002114259304275852,
+        "ci_low": -0.0027763927234486624,
+        "ci_high": -0.001452125885103042,
+        "wins": 198,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-kpca",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.9453475271418796
+    },
+    "-gmm_score": {
+      "pooled_auc": 0.9490494005442259,
+      "elapsed_sec": 125.4,
+      "feature_dim_mean": 65.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": {
+        "mean": -6.058498321922785e-05,
+        "ci_low": -0.00013418559218621005,
+        "ci_high": 1.3015625747754336e-05,
+        "wins": 244,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.0017961923545733419,
+        "ci_low": -0.0023910827241402487,
+        "ci_high": -0.001201301985006435,
+        "wins": 202,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0018687904689837563,
+        "ci_low": -0.002409197978571054,
+        "ci_high": -0.0013283829593964587,
+        "wins": 191,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-gmm_score",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 0,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.9455929959771717
+    },
+    "-hist": {
+      "pooled_auc": 0.9491085498597425,
+      "elapsed_sec": 124.7,
+      "feature_dim_mean": 67.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": {
+        "mean": 8.084498920259272e-06,
+        "ci_low": -4.108001706153392e-05,
+        "ci_high": 5.7249014902052466e-05,
+        "wins": 245,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.0017275228724338548,
+        "ci_low": -0.0023169488606632946,
+        "ci_high": -0.0011380968842044149,
+        "wins": 200,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0018001209868442692,
+        "ci_low": -0.00233585439283383,
+        "ci_high": -0.0012643875808547081,
+        "wins": 195,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-hist",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.9456616654593112
+    },
+    "-scaler": {
+      "pooled_auc": 0.9445365891315911,
+      "elapsed_sec": 126.4,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": {
+        "mean": -0.007823886857701929,
+        "ci_low": -0.008507301664777638,
+        "ci_high": -0.00714047205062622,
+        "wins": 54,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.009559494229056043,
+        "ci_low": -0.010455919545154206,
+        "ci_high": -0.00866306891295788,
+        "wins": 70,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.009632092343466458,
+        "ci_low": -0.010517970933560107,
+        "ci_high": -0.00874621375337281,
+        "wins": 64,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-scaler",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": false,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.937829694102689
+    },
+    "-gmm_stratify": {
+      "pooled_auc": 0.949546516758144,
+      "elapsed_sec": 126.7,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": {
+        "mean": 0.00048433472402643093,
+        "ci_low": 0.0001756908334598621,
+        "ci_high": 0.0007929786145929997,
+        "wins": 285,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.001251272647327683,
+        "ci_low": -0.001828180325607842,
+        "ci_high": -0.0006743649690475243,
+        "wins": 214,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0013238707617380975,
+        "ci_low": -0.0018588273362589286,
+        "ci_high": -0.0007889141872172664,
+        "wins": 209,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-gmm_stratify",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.9461379156844174
+    },
+    "-repeat": {
+      "pooled_auc": 0.9491432185464084,
+      "elapsed_sec": 120.9,
+      "feature_dim_mean": 46.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": {
+        "mean": 0.0007081303286698554,
+        "ci_low": 0.0004971636566093128,
+        "ci_high": 0.000919097000730398,
+        "wins": 309,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.0010274770426842586,
+        "ci_low": -0.0015923095747169538,
+        "ci_high": -0.00046264451065156336,
+        "wins": 219,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.001100075157094673,
+        "ci_low": -0.0015879676307134082,
+        "ci_high": -0.0006121826834759379,
+        "wins": 206,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-repeat",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 1,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.9463617112890608
+    },
+    "-gmm": {
+      "pooled_auc": 0.9350364970053073,
+      "elapsed_sec": 70.1,
+      "feature_dim_mean": 40.67578125,
+      "fits_per_group": 8.0,
+      "vs_probe": {
+        "mean": -0.01106486211578158,
+        "ci_low": -0.01187447411261806,
+        "ci_high": -0.0102552501189451,
+        "wins": 55,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.012800469487135695,
+        "ci_low": -0.01360747618172057,
+        "ci_high": -0.01199346279255082,
+        "wins": 38,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.01287306760154611,
+        "ci_low": -0.013582989841198843,
+        "ci_high": -0.012163145361893377,
+        "wins": 23,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-gmm",
+        "kpca": true,
+        "gmm_k": 0,
+        "gmm_cov": "full",
+        "proba_rep": 0,
+        "score_rep": 0,
+        "hist": true,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.9345887188446094
+    },
+    "-transductive": {
+      "pooled_auc": 0.9304625799758748,
+      "elapsed_sec": 77.3,
+      "feature_dim_mean": 68.67578125,
+      "fits_per_group": 9.0,
+      "vs_probe": {
+        "mean": -0.01565373944420087,
+        "ci_low": -0.01650267737598913,
+        "ci_high": -0.014804801512412612,
+        "wins": 20,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.017389346815554985,
+        "ci_low": -0.018251090098562926,
+        "ci_high": -0.016527603532547043,
+        "wins": 14,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.017461944929965403,
+        "ci_low": -0.018252670056610975,
+        "ci_high": -0.016671219803319832,
+        "wins": 13,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "-transductive",
+        "kpca": true,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 5,
+        "score_rep": 3,
+        "hist": true,
+        "scale": true,
+        "transductive": false,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "ablation"
+      },
+      "group_auc_mean": 0.92999984151619
+    },
+    "minimal": {
+      "pooled_auc": 0.9487476600618471,
+      "elapsed_sec": 57.7,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.000494972754558927,
+        "ci_low": -0.00012413554974774216,
+        "ci_high": 0.0011140810588655963,
+        "wins": 274,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.001240634616795187,
+        "ci_low": -0.0019114852488492737,
+        "ci_high": -0.0005697839847411003,
+        "wins": 225,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0013132327312056014,
+        "ci_low": -0.0019371795462200963,
+        "ci_high": -0.0006892859161911064,
+        "wins": 224,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9461485537149498
+    },
+    "minimal_diag": {
+      "pooled_auc": 0.9323223638455264,
+      "elapsed_sec": 21.9,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.013727317553621936,
+        "ci_low": -0.014581403244892245,
+        "ci_high": -0.012873231862351626,
+        "wins": 40,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.01546292492497605,
+        "ci_low": -0.016298425450226323,
+        "ci_high": -0.014627424399725779,
+        "wins": 23,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.015535523039386467,
+        "ci_low": -0.01631753445463436,
+        "ci_high": -0.014753511624138573,
+        "wins": 19,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_diag",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "diag",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.931926263406769
+    },
+    "minimal_-transductive": {
+      "pooled_auc": 0.9321050467943511,
+      "elapsed_sec": 44.4,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.013974642630079519,
+        "ci_low": -0.014825001179818862,
+        "ci_high": -0.013124284080340175,
+        "wins": 38,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.015710250001433633,
+        "ci_low": -0.016567382095518304,
+        "ci_high": -0.014853117907348962,
+        "wins": 28,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.015782848115844045,
+        "ci_low": -0.016562341242126292,
+        "ci_high": -0.015003354989561797,
+        "wins": 18,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_-transductive",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": false,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9316789383303113
+    },
+    "minimal_-gmm_stratify": {
+      "pooled_auc": 0.9490133422078595,
+      "elapsed_sec": 58.0,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.0008209079383334639,
+        "ci_low": 0.0001832303499797671,
+        "ci_high": 0.0014585855266871608,
+        "wins": 278,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.0009146994330206501,
+        "ci_low": -0.001579860809382989,
+        "ci_high": -0.0002495380566583112,
+        "wins": 242,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0009872975474310645,
+        "ci_low": -0.0016125808303007532,
+        "ci_high": -0.00036201426456137565,
+        "wins": 228,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_-gmm_stratify",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9464744888987244
+    },
+    "minimal_reg0.05": {
+      "pooled_auc": 0.94870268489388,
+      "elapsed_sec": 58.0,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.00014806963288331696,
+        "ci_low": -0.000470195609193697,
+        "ci_high": 0.0007663348749603309,
+        "wins": 277,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.001587537738470797,
+        "ci_low": -0.002273244414662825,
+        "ci_high": -0.000901831062278769,
+        "wins": 215,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0016601358528812115,
+        "ci_low": -0.002305557537450298,
+        "ci_high": -0.001014714168312125,
+        "wins": 220,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_reg0.05",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.05,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9458016505932743
+    },
+    "minimal_reg0.3": {
+      "pooled_auc": 0.9487804121157527,
+      "elapsed_sec": 58.4,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.0014280055358740658,
+        "ci_low": 0.0008017203071092975,
+        "ci_high": 0.0020542907646388343,
+        "wins": 296,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.0003076018354800482,
+        "ci_low": -0.0009509344553991091,
+        "ci_high": 0.0003357307844390127,
+        "wins": 254,
+        "n": 512,
+        "significant": false
+      },
+      "vs_qda_avg4": {
+        "mean": -0.00038019994989046263,
+        "ci_low": -0.0009776535674251195,
+        "ci_high": 0.0002172536676441942,
+        "wins": 249,
+        "n": 512,
+        "significant": false
+      },
+      "cfg": {
+        "name": "minimal_reg0.3",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.3,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.947081586496265
+    },
+    "minimal_reg0.5": {
+      "pooled_auc": 0.9486641565154157,
+      "elapsed_sec": 57.6,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.0016202362229912014,
+        "ci_low": 0.0009742511820625887,
+        "ci_high": 0.002266221263919814,
+        "wins": 303,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.00011537114836291263,
+        "ci_low": -0.0007481542230368586,
+        "ci_high": 0.0005174119263110334,
+        "wins": 264,
+        "n": 512,
+        "significant": false
+      },
+      "vs_qda_avg4": {
+        "mean": -0.00018796926277332704,
+        "ci_low": -0.0007916847518394144,
+        "ci_high": 0.0004157462262927603,
+        "wins": 258,
+        "n": 512,
+        "significant": false
+      },
+      "cfg": {
+        "name": "minimal_reg0.5",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.5,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9472738171833821
+    },
+    "raw_qda": {
+      "pooled_auc": 0.9365873846919731,
+      "elapsed_sec": 7.0,
+      "feature_dim_mean": 39.67578125,
+      "fits_per_group": 6.0,
+      "vs_probe": {
+        "mean": -0.009534553095369987,
+        "ci_low": -0.010353931853774475,
+        "ci_high": -0.0087151743369655,
+        "wins": 75,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.011270160466724102,
+        "ci_low": -0.012082124496917038,
+        "ci_high": -0.010458196436531165,
+        "wins": 56,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.011342758581134517,
+        "ci_low": -0.012086435430679715,
+        "ci_high": -0.010599081731589318,
+        "wins": 48,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "raw_qda",
+        "kpca": false,
+        "gmm_k": 0,
+        "gmm_cov": "full",
+        "proba_rep": 0,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.936119027865021
+    },
+    "raw_qda_reg0.5": {
+      "pooled_auc": 0.9331089593890554,
+      "elapsed_sec": 7.1,
+      "feature_dim_mean": 39.67578125,
+      "fits_per_group": 6.0,
+      "vs_probe": {
+        "mean": -0.013015903469387078,
+        "ci_low": -0.013888733299282733,
+        "ci_high": -0.012143073639491424,
+        "wins": 47,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.014751510840741191,
+        "ci_low": -0.015590810604972631,
+        "ci_high": -0.01391221107650975,
+        "wins": 29,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.014824108955151606,
+        "ci_low": -0.015626413009374316,
+        "ci_high": -0.014021804900928896,
+        "wins": 29,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "raw_qda_reg0.5",
+        "kpca": false,
+        "gmm_k": 0,
+        "gmm_cov": "full",
+        "proba_rep": 0,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.5,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9326376774910039
+    },
+    "gmm_bayes_k1": {
+      "pooled_auc": 0.9365173158811725,
+      "elapsed_sec": 30.1,
+      "feature_dim_mean": 39.67578125,
+      "fits_per_group": 6.0,
+      "vs_probe": {
+        "mean": -0.009602220718135133,
+        "ci_low": -0.010422102530711986,
+        "ci_high": -0.00878233890555828,
+        "wins": 70,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.011337828089489247,
+        "ci_low": -0.012151804603346564,
+        "ci_high": -0.01052385157563193,
+        "wins": 55,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.011410426203899659,
+        "ci_low": -0.012154866895535896,
+        "ci_high": -0.010665985512263422,
+        "wins": 48,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "gmm_bayes_k1",
+        "kpca": false,
+        "gmm_k": 0,
+        "gmm_cov": "full",
+        "proba_rep": 0,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "gmm_bayes",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9360513602422558
+    },
+    "gmm_bayes_k2": {
+      "pooled_auc": 0.9357442353416391,
+      "elapsed_sec": 86.5,
+      "feature_dim_mean": 39.67578125,
+      "fits_per_group": 6.0,
+      "vs_probe": {
+        "mean": -0.010332374348645914,
+        "ci_low": -0.011187242047412532,
+        "ci_high": -0.009477506649879296,
+        "wins": 67,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.012067981720000029,
+        "ci_low": -0.012913574591643225,
+        "ci_high": -0.011222388848356833,
+        "wins": 59,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.012140579834410442,
+        "ci_low": -0.012962023216554812,
+        "ci_high": -0.011319136452266072,
+        "wins": 54,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "gmm_bayes_k2",
+        "kpca": false,
+        "gmm_k": 0,
+        "gmm_cov": "full",
+        "proba_rep": 0,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "gmm_bayes",
+        "bayes_k": 2,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.935321206611745
+    },
+    "gmm_bayes_k3": {
+      "pooled_auc": 0.9289965400542617,
+      "elapsed_sec": 83.3,
+      "feature_dim_mean": 39.67578125,
+      "fits_per_group": 6.0,
+      "vs_probe": {
+        "mean": -0.016900863679218413,
+        "ci_low": -0.017933160650017616,
+        "ci_high": -0.01586856670841921,
+        "wins": 35,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.018636471050572527,
+        "ci_low": -0.019646756132852612,
+        "ci_high": -0.017626185968292442,
+        "wins": 25,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.01870906916498294,
+        "ci_low": -0.019703569987607555,
+        "ci_high": -0.017714568342358322,
+        "wins": 25,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "gmm_bayes_k3",
+        "kpca": false,
+        "gmm_k": 0,
+        "gmm_cov": "full",
+        "proba_rep": 0,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": false,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "gmm_bayes",
+        "bayes_k": 3,
+        "bayes_reg": 0.1,
+        "group": "simple"
+      },
+      "group_auc_mean": 0.9287527172811725
+    },
+    "minimal_k3_s1": {
+      "pooled_auc": 0.9436898702837531,
+      "elapsed_sec": 46.7,
+      "feature_dim_mean": 42.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.003082242071507776,
+        "ci_low": -0.0037684845152259885,
+        "ci_high": -0.0023959996277895636,
+        "wins": 174,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.00481784944286189,
+        "ci_low": -0.005507839617699441,
+        "ci_high": -0.00412785926802434,
+        "wins": 129,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.004890447557272305,
+        "ci_low": -0.005497635021009341,
+        "ci_high": -0.004283260093535269,
+        "wins": 122,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k3_s1",
+        "kpca": false,
+        "gmm_k": 3,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.942571338888883
+    },
+    "minimal_k3_s2": {
+      "pooled_auc": 0.9434913032298835,
+      "elapsed_sec": 46.8,
+      "feature_dim_mean": 42.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.0033757813507368983,
+        "ci_low": -0.004047958416668236,
+        "ci_high": -0.00270360428480556,
+        "wins": 165,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.005111388722091012,
+        "ci_low": -0.00577230895791827,
+        "ci_high": -0.004450468486263753,
+        "wins": 117,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.005183986836501427,
+        "ci_low": -0.005769164003903707,
+        "ci_high": -0.004598809669099147,
+        "wins": 111,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k3_s2",
+        "kpca": false,
+        "gmm_k": 3,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 2,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9422777996096541
+    },
+    "minimal_k4_s1": {
+      "pooled_auc": 0.947025836381611,
+      "elapsed_sec": 52.7,
+      "feature_dim_mean": 43.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.0005159464641245042,
+        "ci_low": -0.0011439670292682689,
+        "ci_high": 0.00011207410101926032,
+        "wins": 231,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.0022515538354786185,
+        "ci_low": -0.002880702761524957,
+        "ci_high": -0.00162240490943228,
+        "wins": 191,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.002324151949889033,
+        "ci_low": -0.0028808004460185643,
+        "ci_high": -0.0017675034537595017,
+        "wins": 184,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k4_s1",
+        "kpca": false,
+        "gmm_k": 4,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9451376344962663
+    },
+    "minimal_k4_s2": {
+      "pooled_auc": 0.9474321361004941,
+      "elapsed_sec": 52.3,
+      "feature_dim_mean": 43.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.0001467519615742589,
+        "ci_low": -0.0007841738756219535,
+        "ci_high": 0.0004906699524734357,
+        "wins": 243,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.001882359332928373,
+        "ci_low": -0.002528310709706402,
+        "ci_high": -0.0012364079561503437,
+        "wins": 198,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0019549574473387873,
+        "ci_low": -0.0025408934166677114,
+        "ci_high": -0.0013690214780098632,
+        "wins": 185,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k4_s2",
+        "kpca": false,
+        "gmm_k": 4,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 2,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9455068289988167
+    },
+    "minimal_k5_s2": {
+      "pooled_auc": 0.9489346159387959,
+      "elapsed_sec": 58.0,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.000743583307297134,
+        "ci_low": 8.863112308679893e-05,
+        "ci_high": 0.001398535491507469,
+        "wins": 269,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.00099202406405698,
+        "ci_low": -0.0016789025992898026,
+        "ci_high": -0.00030514552882415736,
+        "wins": 236,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0010646221784673944,
+        "ci_low": -0.0016985316093273471,
+        "ci_high": -0.00043071274760744164,
+        "wins": 217,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k5_s2",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 2,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.946397164267688
+    },
+    "minimal_k5_s3": {
+      "pooled_auc": 0.948893372580396,
+      "elapsed_sec": 58.2,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.0005675616326949156,
+        "ci_low": -0.00010213808572558222,
+        "ci_high": 0.0012372613511154136,
+        "wins": 257,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.0011680457386591984,
+        "ci_low": -0.0018432697716019401,
+        "ci_high": -0.0004928217057164567,
+        "wins": 221,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0012406438530696128,
+        "ci_low": -0.0018812508987395633,
+        "ci_high": -0.0006000368073996622,
+        "wins": 215,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k5_s3",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 3,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9462211425930859
+    },
+    "minimal_k5_s4": {
+      "pooled_auc": 0.9488363518026297,
+      "elapsed_sec": 57.2,
+      "feature_dim_mean": 44.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": 0.00040418906487901503,
+        "ci_low": -0.00023027730791763126,
+        "ci_high": 0.0010386554376756612,
+        "wins": 258,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.001331418306475099,
+        "ci_low": -0.001996620129847586,
+        "ci_high": -0.0006662164831026118,
+        "wins": 213,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0014040164208855134,
+        "ci_low": -0.002022472368858755,
+        "ci_high": -0.0007855604729122718,
+        "wins": 206,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k5_s4",
+        "kpca": false,
+        "gmm_k": 5,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 4,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9460577700252699
+    },
+    "minimal_k6_s1": {
+      "pooled_auc": 0.9485205266960843,
+      "elapsed_sec": 64.3,
+      "feature_dim_mean": 45.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.0003142593177236845,
+        "ci_low": -0.0009327625268326154,
+        "ci_high": 0.00030424389138524637,
+        "wins": 243,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.0020498666890777983,
+        "ci_low": -0.002715891520642626,
+        "ci_high": -0.0013838418575129708,
+        "wins": 184,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.0021224648034882127,
+        "ci_low": -0.0027355745050739195,
+        "ci_high": -0.001509355101902506,
+        "wins": 193,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k6_s1",
+        "kpca": false,
+        "gmm_k": 6,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9453393216426673
+    },
+    "minimal_k6_s2": {
+      "pooled_auc": 0.9485054136298575,
+      "elapsed_sec": 64.4,
+      "feature_dim_mean": 45.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.00016239372276852194,
+        "ci_low": -0.0008115922002261674,
+        "ci_high": 0.00048680475468912356,
+        "wins": 240,
+        "n": 512,
+        "significant": false
+      },
+      "vs_baseline_final": {
+        "mean": -0.001898001094122636,
+        "ci_low": -0.002591022440333774,
+        "ci_high": -0.001204979747911498,
+        "wins": 195,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.00197059920853305,
+        "ci_low": -0.002611151848640716,
+        "ci_high": -0.0013300465684253845,
+        "wins": 201,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k6_s2",
+        "kpca": false,
+        "gmm_k": 6,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 2,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9454911872376224
+    },
+    "minimal_k7_s1": {
+      "pooled_auc": 0.9478788468373278,
+      "elapsed_sec": 75.1,
+      "feature_dim_mean": 46.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.0009183983302985333,
+        "ci_low": -0.0016049646654208954,
+        "ci_high": -0.00023183199517617112,
+        "wins": 225,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.0026540057016526475,
+        "ci_low": -0.0033608852869165995,
+        "ci_high": -0.0019471261163886955,
+        "wins": 185,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.002726603816063062,
+        "ci_low": -0.003381884505095439,
+        "ci_high": -0.002071323127030685,
+        "wins": 184,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k7_s1",
+        "kpca": false,
+        "gmm_k": 7,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 1,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9447351826300924
+    },
+    "minimal_k7_s2": {
+      "pooled_auc": 0.9478083167017093,
+      "elapsed_sec": 76.2,
+      "feature_dim_mean": 46.67578125,
+      "fits_per_group": 7.0,
+      "vs_probe": {
+        "mean": -0.0008977393115991395,
+        "ci_low": -0.001543246063259572,
+        "ci_high": -0.0002522325599387072,
+        "wins": 225,
+        "n": 512,
+        "significant": true
+      },
+      "vs_baseline_final": {
+        "mean": -0.002633346682953254,
+        "ci_low": -0.00333184725382187,
+        "ci_high": -0.0019348461120846376,
+        "wins": 197,
+        "n": 512,
+        "significant": true
+      },
+      "vs_qda_avg4": {
+        "mean": -0.002705944797363668,
+        "ci_low": -0.003341581011114681,
+        "ci_high": -0.0020703085836126555,
+        "wins": 185,
+        "n": 512,
+        "significant": true
+      },
+      "cfg": {
+        "name": "minimal_k7_s2",
+        "kpca": false,
+        "gmm_k": 7,
+        "gmm_cov": "full",
+        "proba_rep": 1,
+        "score_rep": 0,
+        "hist": false,
+        "scale": true,
+        "transductive": true,
+        "stratify_gmm": true,
+        "reg_param": 0.111,
+        "seed": 2,
+        "init_params": "kmeans",
+        "model": "qda",
+        "bayes_k": 1,
+        "bayes_reg": 0.1,
+        "group": "family"
+      },
+      "group_auc_mean": 0.9447558416487918
+    }
+  },
+  "combos": {
+    "minimal_4seeds": {
+      "members": [
+        "minimal",
+        "minimal_k5_s2",
+        "minimal_k5_s3",
+        "minimal_k5_s4"
+      ],
+      "note": "minimal, GMM seed 4개 평균 (k=5)",
+      "pooled_auc": 0.9493152244841009,
+      "group_auc_mean": 0.9477493890347823,
+      "vs_baseline_final": {
+        "mean": 0.00036020070303727355,
+        "ci_low": -0.0002562898873005005,
+        "ci_high": 0.0009766912933750476,
+        "wins": 259,
+        "n": 512,
+        "significant": false
+      },
+      "elapsed_sec": 231.1,
+      "fits_per_group": 28.0
+    },
+    "minimal_5k": {
+      "members": [
+        "minimal_k3_s1",
+        "minimal_k4_s1",
+        "minimal",
+        "minimal_k6_s1",
+        "minimal_k7_s1"
+      ],
+      "note": "minimal, k=3..7 평균 (seed 1)",
+      "pooled_auc": 0.9493286437364937,
+      "group_auc_mean": 0.9484169755529855,
+      "vs_baseline_final": {
+        "mean": 0.0010277872212405353,
+        "ci_low": 0.00042444903211892994,
+        "ci_high": 0.0016311254103621407,
+        "wins": 282,
+        "n": 512,
+        "significant": true
+      },
+      "elapsed_sec": 296.5,
+      "fits_per_group": 35.0
+    },
+    "minimal_5k_x2seeds": {
+      "members": [
+        "minimal_k3_s1",
+        "minimal_k4_s1",
+        "minimal",
+        "minimal_k6_s1",
+        "minimal_k7_s1",
+        "minimal_k3_s2",
+        "minimal_k4_s2",
+        "minimal_k5_s2",
+        "minimal_k6_s2",
+        "minimal_k7_s2"
+      ],
+      "note": "minimal, k=3..7 x seed 2개 = 10개 평균",
+      "pooled_auc": 0.9493288456879739,
+      "group_auc_mean": 0.9487188752400875,
+      "vs_baseline_final": {
+        "mean": 0.0013296869083424148,
+        "ci_low": 0.0007220347499601857,
+        "ci_high": 0.0019373390667246438,
+        "wins": 284,
+        "n": 512,
+        "significant": true
+      },
+      "elapsed_sec": 594.2,
+      "fits_per_group": 70.0
+    },
+    "minimal_all": {
+      "members": [
+        "minimal",
+        "minimal_k3_s1",
+        "minimal_k3_s2",
+        "minimal_k4_s1",
+        "minimal_k4_s2",
+        "minimal_k5_s2",
+        "minimal_k5_s3",
+        "minimal_k5_s4",
+        "minimal_k6_s1",
+        "minimal_k6_s2",
+        "minimal_k7_s1",
+        "minimal_k7_s2"
+      ],
+      "note": "minimal 계열 전부 평균",
+      "pooled_auc": 0.9493684683995702,
+      "group_auc_mean": 0.9487714055216472,
+      "vs_baseline_final": {
+        "mean": 0.001382217189902265,
+        "ci_low": 0.0007800308234288852,
+        "ci_high": 0.001984403556375645,
+        "wins": 289,
+        "n": 512,
+        "significant": true
+      },
+      "elapsed_sec": 709.6,
+      "fits_per_group": 84.0
+    }
+  },
+  "stack": {
+    "members": [
+      "minimal",
+      "minimal_k3_s1",
+      "minimal_k3_s2",
+      "minimal_k4_s1",
+      "minimal_k4_s2",
+      "minimal_k5_s2",
+      "minimal_k5_s3",
+      "minimal_k5_s4",
+      "minimal_k6_s1",
+      "minimal_k6_s2",
+      "minimal_k7_s1",
+      "minimal_k7_s2"
+    ],
+    "pooled_auc": 0.9494478392602727,
+    "vs_baseline_final": {
+      "mean": 0.002120597998145569,
+      "ci_low": 0.0013937651484030216,
+      "ci_high": 0.0028474308478881162,
+      "wins": 309,
+      "n": 512,
+      "significant": true
+    }
+  },
+  "best_simple": {
+    "name": "-gmm_stratify",
+    "pooled_auc": 0.949546516758144,
+    "fits_per_group": 9.0,
+    "vs_baseline_final": {
+      "mean": -0.001251272647327683,
+      "ci_low": -0.001828180325607842,
+      "ci_high": -0.0006743649690475243,
+      "wins": 214,
+      "n": 512,
+      "significant": true
+    }
+  },
+  "elapsed_sec": 2210.5
+}
