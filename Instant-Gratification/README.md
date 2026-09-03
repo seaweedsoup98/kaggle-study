@@ -216,7 +216,7 @@ CV 는 target 이 아니라 **GMM 군집 라벨로 stratify** 한다.
 |---|---|---|---|
 | 1 | `run_model(model_list, train, test, 1)` | `train` / `test` 라는 이름은 정의된 적이 없음 (`train_df` / `test_df`) → `NameError` | 스크립트 전체에서 `train_df` / `test_df` 사용 |
 | 2 | `StratifiedKFold(n_splits=5, random_state=random_state)` | `shuffle=False` 인데 `random_state` 를 주면 최신 scikit-learn 에서 `ValueError` | `shuffle=True` 추가 |
-| 3 | GMM 군집 라벨로 stratify | 군집 크기가 fold 수보다 작거나 특정 fold 학습셋이 한 클래스만 갖게 되면 학습 실패 | `_make_folds()` 에서 검증 후 문제가 있을 때만 target stratify 로 폴백 |
+| 3 | GMM 군집 라벨로 stratify | 군집 크기가 fold 수보다 작거나 특정 fold 학습셋이 한 클래스만 갖게 되면 학습 실패 (방어적 수정) | `_make_folds()` 에서 검증 후 문제가 있을 때만 target stratify 로 폴백 |
 | 4 | `lgbm.Dataset(..., silent=True)` | LightGBM 4.x 에서 제거된 인자 → `TypeError` | 인자 제거 |
 | 5 | `lgbm.train(..., verbose_eval=False, early_stopping_rounds=100)` | LightGBM 4.x 에서 제거된 인자 → `TypeError` | `callbacks=[lgbm.early_stopping(100), lgbm.log_evaluation(0)]` 로 대체 |
 | 6 | `sns.distplot(...)` | seaborn 0.14 에서 제거 예정(현재 deprecated) | `sns.kdeplot(...)` (EDA 노트북) |
@@ -225,7 +225,7 @@ CV 는 target 이 아니라 **GMM 군집 라벨로 stratify** 한다.
 | 9 | `submission["target"] = oof_test_third.mean(1)` | 인덱스 정렬에 의존 — 순서가 다르면 조용히 잘못된 제출 파일 생성 | `sample_submission` 의 `id` 와 대조하고, 다르면 `id` 기준으로 매핑 |
 | 10 | `train_second.mean(1)` | pandas 3.x 에서 위치 인자 deprecated | `mean(axis=1)` |
 | 11 | 6개 모델 인스턴스를 fold/그룹 간 공유하며 재적합 | 상태가 누적될 여지가 있고 재현성이 떨어짐 | `sklearn.base.clone()` 으로 fold 마다 새 인스턴스 |
-| 12 | `cols` 가 빈 리스트일 때 `KernelPCA(n_components=0)` | 그룹에 유효 피처가 없으면 예외 | 해당 그룹 건너뜀 |
+| 12 | `cols` 가 빈 리스트일 때 `KernelPCA(n_components=0)` | 그룹에 유효 피처가 없으면 예외 (방어적 수정 — 실제 데이터에서는 그룹당 최소 33개) | 해당 그룹 건너뜀 |
 | 13 | `hist_model.predict` 의 이중 파이썬 루프 | 512 그룹 × 4회 실행에서 현실적인 시간 안에 끝나지 않음 | `np.searchsorted` 로 벡터화 (**결과값은 원본과 동일**) |
 
 그 외 동작은 원본과 동일하게 유지했다.
