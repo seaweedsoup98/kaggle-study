@@ -1,0 +1,27 @@
+[pseudo] loading data ...
+[pseudo] train=(262144, 258) test=(262144, 257)
+[pseudo] magics=512 thresholds=[0.9, 0.99] train_rows=262144
+[pseudo] level1 kmeans_seed1 [no_pseudo]: {"nusvc_deg4": 0.9490310069524287, "nusvc_deg2": 0.9483173107418434, "qda": 0.9490644878826664, "svc_deg4": 0.9489953482989673, "knn16": 0.948932071041646, "logreg_l1": 0.938393079383605, "mean_of_models": 0.9493423275136024, "elapsed_sec": 1028.5}
+[pseudo] level1 kmeans_seed1 [p>0.9]: {"nusvc_deg4": 0.9484688901851754, "nusvc_deg2": 0.9468657489572898, "qda": 0.9493240864840848, "svc_deg4": 0.9489410710810983, "knn16": 0.9488893088416416, "logreg_l1": 0.9385124221145589, "mean_of_models": 0.9492892311836576, "elapsed_sec": 1028.5}
+[pseudo] level1 kmeans_seed1 [p>0.99]: {"nusvc_deg4": 0.9490057467192692, "nusvc_deg2": 0.9483083567737549, "qda": 0.9492468604010702, "svc_deg4": 0.9489760193100563, "knn16": 0.9488762396501222, "logreg_l1": 0.9383930853789942, "mean_of_models": 0.9493347066755755, "elapsed_sec": 1028.5}
+[pseudo] level1 kmeans_seed2 [no_pseudo]: {"nusvc_deg4": 0.9487995638332317, "nusvc_deg2": 0.9479397629881888, "qda": 0.9489387040665606, "svc_deg4": 0.9487952631019851, "knn16": 0.9488747813444856, "logreg_l1": 0.9386364520756286, "mean_of_models": 0.9492911756105762, "elapsed_sec": 1062.1}
+[pseudo] level1 kmeans_seed2 [p>0.9]: {"nusvc_deg4": 0.9482098376298255, "nusvc_deg2": 0.9465431455977152, "qda": 0.9492127026030457, "svc_deg4": 0.9487395203607294, "knn16": 0.9488234758605453, "logreg_l1": 0.9386478266384071, "mean_of_models": 0.9493236134013194, "elapsed_sec": 1062.1}
+[pseudo] level1 kmeans_seed2 [p>0.99]: {"nusvc_deg4": 0.9488042204461181, "nusvc_deg2": 0.9479545159527201, "qda": 0.9491543101326423, "svc_deg4": 0.9487874902255478, "knn16": 0.9488146486687425, "logreg_l1": 0.938636445847409, "mean_of_models": 0.9493260603349759, "elapsed_sec": 1062.1}
+[pseudo] level1 random_seed1 [no_pseudo]: {"nusvc_deg4": 0.9483910154068819, "nusvc_deg2": 0.9479083383017866, "qda": 0.9483350125646925, "svc_deg4": 0.9483510852715236, "knn16": 0.9480985891398059, "logreg_l1": 0.9379024259080887, "mean_of_models": 0.9484993709761457, "elapsed_sec": 978.3}
+[pseudo] level1 random_seed1 [p>0.9]: {"nusvc_deg4": 0.9481814343866946, "nusvc_deg2": 0.9467669885426051, "qda": 0.9486044481444182, "svc_deg4": 0.9484018194181663, "knn16": 0.947951357575926, "logreg_l1": 0.9378923168962776, "mean_of_models": 0.9483830053051217, "elapsed_sec": 978.3}
+[pseudo] level1 random_seed1 [p>0.99]: {"nusvc_deg4": 0.9483996351756844, "nusvc_deg2": 0.9478854252052485, "qda": 0.94853219261731, "svc_deg4": 0.9483331991632193, "knn16": 0.9479494495578997, "logreg_l1": 0.9379024259080887, "mean_of_models": 0.9484896825437896, "elapsed_sec": 978.3}
+[pseudo] level1 random_seed2 [no_pseudo]: {"nusvc_deg4": 0.9482949173233036, "nusvc_deg2": 0.9475867306424625, "qda": 0.948530536842183, "svc_deg4": 0.9481831511925541, "knn16": 0.948014808175662, "logreg_l1": 0.9377235270191714, "mean_of_models": 0.9483809012727966, "elapsed_sec": 986.0}
+[pseudo] level1 random_seed2 [p>0.9]: {"nusvc_deg4": 0.9477148820551827, "nusvc_deg2": 0.9460098573678687, "qda": 0.9485524911421277, "svc_deg4": 0.948195058762885, "knn16": 0.9479062625874886, "logreg_l1": 0.9376830703664146, "mean_of_models": 0.9482173680713547, "elapsed_sec": 986.0}
+[pseudo] level1 random_seed2 [p>0.99]: {"nusvc_deg4": 0.9482640195035456, "nusvc_deg2": 0.9475717396959089, "qda": 0.94848583059361, "svc_deg4": 0.948184134814715, "knn16": 0.9479753618041746, "logreg_l1": 0.9377236076949895, "mean_of_models": 0.9483955442830561, "elapsed_sec": 986.0}
+[pseudo] [no_pseudo] level1 ensemble AUC = 0.949604
+[pseudo] [no_pseudo] level2: {"lgbm_auc": 0.9495550173176566, "mlp_auc": 0.9499631329991503}
+[pseudo] [no_pseudo] final ensemble AUC = 0.949605
+[pseudo] [p>0.9] level1 ensemble AUC = 0.949651
+[pseudo] [p>0.9] level2: {"lgbm_auc": 0.949511995657003, "mlp_auc": 0.9492438006862617}
+[pseudo] [p>0.9] final ensemble AUC = 0.949614
+[pseudo] [p>0.99] level1 ensemble AUC = 0.949605
+[pseudo] [p>0.99] level2: {"lgbm_auc": 0.9499038468374223, "mlp_auc": 0.9498198578682014}
+[pseudo] [p>0.99] final ensemble AUC = 0.949607
+[pseudo] best variant = p>0.9
+[pseudo] wrote metrics.json and submission.csv
+[pseudo] done in 4555.5s

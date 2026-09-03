@@ -1,0 +1,52 @@
+[wens] loaded oof train=(262144, 8) test=(262144, 8)
+[wens] loaded target n=262144 positive_rate=0.499973
+[wens] folds=5 seed=42 methods=21
+[wens] reference baseline final AUC = 0.949605
+[wens] mean_prob_8                  cv=0.949604(+-0.001619) pooled=0.949604 in_sample=0.949605 gap=+0.000001 (0.3s)
+[wens] mean_prob_6_level1           cv=0.949604(+-0.001577) pooled=0.949604 in_sample=0.949604 gap=+0.000000 d_vs_mean=+0.000000(+-0.000115) (0.3s)
+[wens] mlp_meta_only                cv=0.949968(+-0.000914) pooled=0.949968 in_sample=0.949963 gap=-0.000005 d_vs_mean=+0.000364(+-0.001049) (0.3s)
+[wens] lgbm_meta_only               cv=0.949559(+-0.001255) pooled=0.949559 in_sample=0.949555 gap=-0.000004 d_vs_mean=-0.000045(+-0.000731) (0.2s)
+[wens] mean_logit_8                 cv=0.949436(+-0.001476) pooled=0.949436 in_sample=0.949437 gap=+0.000001 d_vs_mean=-0.000167(+-0.000216) (0.2s)
+[wens] mean_rank_8                  cv=0.949427(+-0.001537) pooled=0.949427 in_sample=0.949427 gap=-0.000000 d_vs_mean=-0.000176(+-0.000168) (0.3s)
+[wens] logreg_stack_logit_8         cv=0.949800(+-0.001234) pooled=0.949800 in_sample=0.950045 gap=+0.000245 d_vs_mean=+0.000196(+-0.000865) (2.0s)
+[wens] logreg_stack_prob_8          cv=0.949880(+-0.001168) pooled=0.949880 in_sample=0.950084 gap=+0.000203 d_vs_mean=+0.000277(+-0.000699) (2.7s)
+[wens] logreg_stack_rank_8          cv=0.949425(+-0.001376) pooled=0.949425 in_sample=0.949447 gap=+0.000022 d_vs_mean=-0.000179(+-0.000282) (2.9s)
+[wens] nnls_logit_8                 cv=0.949823(+-0.001052) pooled=0.949823 in_sample=0.949866 gap=+0.000043 d_vs_mean=+0.000219(+-0.000905) (0.7s)
+[wens] nnls_rank_8                  cv=0.949391(+-0.001409) pooled=0.949391 in_sample=0.949398 gap=+0.000007 d_vs_mean=-0.000213(+-0.000307) (0.7s)
+[wens] auc_opt_prob_8               cv=0.949943(+-0.001154) pooled=0.949943 in_sample=0.950561 gap=+0.000619 d_vs_mean=+0.000339(+-0.000720) (207.4s)
+[wens] auc_opt_logit_8              cv=0.949642(+-0.001186) pooled=0.949642 in_sample=0.950391 gap=+0.000749 d_vs_mean=+0.000038(+-0.000727) (218.4s)
+[wens] auc_opt_rank_8               cv=0.949517(+-0.001424) pooled=0.949517 in_sample=0.950028 gap=+0.000511 d_vs_mean=-0.000087(+-0.000496) (180.8s)
+[wens] subset_mean_logit_8          cv=0.949634(+-0.001470) pooled=0.949647 in_sample=0.949963 gap=+0.000316 d_vs_mean=+0.000030(+-0.000739) (21.9s)
+[wens] subset_mean_rank_8           cv=0.949469(+-0.001438) pooled=0.949469 in_sample=0.949963 gap=+0.000494 d_vs_mean=-0.000134(+-0.000510) (22.5s)
+[wens] blend_l1mean_mlp_prob        cv=0.949831(+-0.001128) pooled=0.949831 in_sample=0.949963 gap=+0.000132 d_vs_mean=+0.000227(+-0.000874) (5.1s)
+[wens] blend_l1mean_mlp_logit       cv=0.949592(+-0.001545) pooled=0.949592 in_sample=0.949963 gap=+0.000371 d_vs_mean=-0.000011(+-0.000734) (4.3s)
+[wens] blend_l1mean_mlp_rank        cv=0.949592(+-0.001545) pooled=0.949592 in_sample=0.949963 gap=+0.000371 d_vs_mean=-0.000011(+-0.000734) (4.2s)
+[wens] blend_l1mean_lgbm_mlp_prob   cv=0.949269(+-0.001569) pooled=0.949269 in_sample=0.949963 gap=+0.000694 d_vs_mean=-0.000335(+-0.000417) (19.0s)
+[wens] blend_l1mean_lgbm_mlp_rank   cv=0.949444(+-0.001528) pooled=0.949444 in_sample=0.949963 gap=+0.000519 d_vs_mean=-0.000159(+-0.000513) (19.2s)
+[wens] ranking by cv_auc:
+[wens]    1. mlp_meta_only                cv=0.949968 pooled=0.949968 in_sample=0.949963 gap=-0.000005
+[wens]    2. auc_opt_prob_8               cv=0.949943 pooled=0.949943 in_sample=0.950561 gap=+0.000619
+[wens]    3. logreg_stack_prob_8          cv=0.949880 pooled=0.949880 in_sample=0.950084 gap=+0.000203
+[wens]    4. blend_l1mean_mlp_prob        cv=0.949831 pooled=0.949831 in_sample=0.949963 gap=+0.000132
+[wens]    5. nnls_logit_8                 cv=0.949823 pooled=0.949823 in_sample=0.949866 gap=+0.000043
+[wens]    6. logreg_stack_logit_8         cv=0.949800 pooled=0.949800 in_sample=0.950045 gap=+0.000245
+[wens]    7. auc_opt_logit_8              cv=0.949642 pooled=0.949642 in_sample=0.950391 gap=+0.000749
+[wens]    8. subset_mean_logit_8          cv=0.949634 pooled=0.949647 in_sample=0.949963 gap=+0.000316
+[wens]    9. mean_prob_6_level1           cv=0.949604 pooled=0.949604 in_sample=0.949604 gap=+0.000000
+[wens]   10. mean_prob_8                  cv=0.949604 pooled=0.949604 in_sample=0.949605 gap=+0.000001
+[wens]   11. blend_l1mean_mlp_logit       cv=0.949592 pooled=0.949592 in_sample=0.949963 gap=+0.000371
+[wens]   12. blend_l1mean_mlp_rank        cv=0.949592 pooled=0.949592 in_sample=0.949963 gap=+0.000371
+[wens]   13. lgbm_meta_only               cv=0.949559 pooled=0.949559 in_sample=0.949555 gap=-0.000004
+[wens]   14. auc_opt_rank_8               cv=0.949517 pooled=0.949517 in_sample=0.950028 gap=+0.000511
+[wens]   15. subset_mean_rank_8           cv=0.949469 pooled=0.949469 in_sample=0.949963 gap=+0.000494
+[wens]   16. blend_l1mean_lgbm_mlp_rank   cv=0.949444 pooled=0.949444 in_sample=0.949963 gap=+0.000519
+[wens]   17. mean_logit_8                 cv=0.949436 pooled=0.949436 in_sample=0.949437 gap=+0.000001
+[wens]   18. mean_rank_8                  cv=0.949427 pooled=0.949427 in_sample=0.949427 gap=-0.000000
+[wens]   19. logreg_stack_rank_8          cv=0.949425 pooled=0.949425 in_sample=0.949447 gap=+0.000022
+[wens]   20. nnls_rank_8                  cv=0.949391 pooled=0.949391 in_sample=0.949398 gap=+0.000007
+[wens]   21. blend_l1mean_lgbm_mlp_prob   cv=0.949269 pooled=0.949269 in_sample=0.949963 gap=+0.000694
+[wens] best=mlp_meta_only cv_auc=0.949968 pooled=0.949968 pooled_delta_vs_baseline=+0.000363
+[wens] best weights: {"mlp_meta": 1.0}
+[wens] wrote submission.csv rows=262144
+[wens] spearman corr(best submission, baseline mean submission) = 0.709398
+[wens] wrote metrics.json; done in 719.3s
