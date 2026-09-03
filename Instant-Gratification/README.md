@@ -160,6 +160,8 @@ python experiments/pseudo_labeling/pseudo_labeling.py
 40개 그룹 · QDA · 5-fold · **대응 비교(paired, 95% CI)** 로 구성요소를 하나씩 켜고 끈다.
 기준선(원본 설정) pooled AUC = **0.94826**.
 
+> ⚠️ 이 표의 마지막 줄(pseudo labeling)은 파일럿 결과이며, **7.2절에서 전체 규모로 확장했을 때 재현되지 않았다.** 노트북에도 그 전말을 후속 상자로 남겨 두었다 — 축소 실험의 한계를 보여 주는 사례다.
+
 | 실험 | 결과 | 판정 |
 |---|---|---|
 | **std 임계값** | 1.5 / 2.0 / 2.5 가 **완전히 동일**. 1.0 → 0.726 붕괴, 3.5 → 0.935 | 2.0 은 안전한 구간 한가운데 |
@@ -173,7 +175,7 @@ python experiments/pseudo_labeling/pseudo_labeling.py
 | GMM 라벨로 stratify | 제거해도 +0.0004 | 효과 없음 |
 | StandardScaler | 제거 시 −0.0066 (유의) | 필요 |
 | **transductive (train+test)** | train 만 쓰면 **−0.0169**, **40/40 그룹에서 열세** | 가장 큰 단일 요인 |
-| **pseudo labeling** | p>0.9 에서 **+0.0011** (fold 당 ~504행 추가) | 유일하게 남은 개선 여지 |
+| **pseudo labeling** | p>0.9 에서 **+0.0011** (fold 당 ~504행 추가) | 파일럿 한정 — 512그룹·6모델에서 **재현 실패** (7.2절) |
 
 ### 4.4 [`04_model_diagnostics.ipynb`](eda/04_model_diagnostics.ipynb) — 모델·앙상블 진단
 
