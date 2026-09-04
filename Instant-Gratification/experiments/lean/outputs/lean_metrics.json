@@ -1,0 +1,44 @@
+{
+  "config": {
+    "magic_limit": 512,
+    "seeds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "gmm_k": 5,
+    "reg_param": 0.111,
+    "n_splits": 5,
+    "pipeline": "std>2 select -> KernelPCA(cosine, d) -> GMM(k, full) proba x1 -> StandardScaler -> QDA, target-stratified CV, transductive"
+  },
+  "per_seed": {
+    "1": {
+      "pooled_auc": 0.9495458618928531,
+      "elapsed_sec": 130.6
+    },
+    "2": {
+      "pooled_auc": 0.9491905064793731,
+      "elapsed_sec": 133.1
+    },
+    "3": {
+      "pooled_auc": 0.9494345813886201,
+      "elapsed_sec": 131.5
+    },
+    "4": {
+      "pooled_auc": 0.9484687601201569,
+      "elapsed_sec": 130.8
+    }
+  },
+  "final_auc": 0.9496986067990791,
+  "check": {
+    "reference_lean_4seeds": 0.9496986067990791,
+    "abs_diff": 0.0
+  },
+  "elapsed_sec": 545.3,
+  "outputs": {
+    "submission": "lean_submission.csv",
+    "oof_train": "lean_oof_train.npy",
+    "oof_test": "lean_oof_test.npy"
+  }
+}

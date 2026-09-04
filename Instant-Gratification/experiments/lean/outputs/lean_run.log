@@ -1,0 +1,9 @@
+[lean] loading data ...
+[lean] groups=512 seeds=[1, 2, 3, 4] gmm_k=5 reg_param=0.111
+[lean] seed 1: pooled AUC=0.949546 (130.6s)
+[lean] seed 2: pooled AUC=0.949191 (133.1s)
+[lean] seed 3: pooled AUC=0.949435 (131.5s)
+[lean] seed 4: pooled AUC=0.948469 (130.8s)
+[lean] FINAL (mean of 4 seeds): pooled AUC = 0.949699
+[lean] CHECK vs simplify lean_4seeds: ref=0.9496986067990791 this=0.9496986067990791 |diff|=0.00e+00 -> OK (bit-level)
+[lean] done in 545.3s

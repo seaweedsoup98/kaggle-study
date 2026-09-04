@@ -47,10 +47,14 @@ Instant-Gratification/
 ├── eda/                           # 모든 노트북은 실행 결과가 포함된 상태로 커밋됨
 │   ├── 01_eda_report.ipynb        #   기초 EDA — 데이터 개요와 magic 컬럼 발견
 │   ├── 02_magic_group_structure.ipynb  # 그룹 구조 심층 — 생성 메커니즘 역추적
-│   ├── 03_feature_engineering.ipynb    # 피처 엔지니어링 실험 — 구성요소별 ablation
-│   └── 04_model_diagnostics.ipynb      # 모델·앙상블 진단 — 실행 결과 OOF 분석
+│   ├── 03_feature_engineering.ipynb    # 피처 엔지니어링 실험 — 40그룹 파일럿 ablation
+│   ├── 04_model_diagnostics.ipynb      # 모델·앙상블 진단 — 실행 결과 OOF 분석
+│   └── 05_ablation.ipynb               # 512그룹 ablation 설계·판독 — simplify 산출물 분석
 └── experiments/                   # 실험마다 폴더 하나, 결과물은 각자 outputs/ 에
-    ├── baseline/
+    ├── lean/                      # ★ 현재 기준 파이프라인 (5.3절) — baseline 과 같은 점수, 1/5 시간
+    │   ├── lean.py
+    │   └── outputs/
+    ├── baseline/                  # 원본 노트북을 옮긴 최초 기준 (5.1~5.2절) — 비교용으로 유지
     │   ├── baseline.py            #   baseline 실험 코드 (.py)
     │   └── outputs/               #   실행 결과가 여기에 생성됨
     │       ├── baseline_metrics.json
@@ -120,6 +124,17 @@ python experiments/pseudo_labeling/pseudo_labeling.py
 
 > 5) 와 6) 은 모두 `experiments/baseline/outputs/` 의 산출물을 읽으므로 4) 를 먼저 완주해야 한다.
 
+```bash
+# 7) 추가 실험 — baseline 해부 & 단순화 (1차 54분 + 후속 18분). eda/05 가 이 산출물을 읽는다
+python experiments/simplify/simplify.py
+python experiments/simplify/simplify.py --phase followup --tag followup
+```
+
+```bash
+# 8) ★ 기준 파이프라인 lean — 시드 4개, 약 8.5분. --check 는 7) 의 lean_4seeds 와 비트 비교
+python experiments/lean/lean.py --check
+```
+
 ---
 
 ## 4. EDA
@@ -131,7 +146,8 @@ python experiments/pseudo_labeling/pseudo_labeling.py
 코드에도 "왜 이렇게 쓰는지"를 주석으로 달았다.
 **기대와 다른 결과가 나온 곳(가설 기각)도 지우지 않고 그대로 남겨 두었다** — 02 노트북에 두 개 있다.
 
-읽는 순서는 01 → 02 → 03 → 04 이며, 각 노트북 끝에 `직접 해보기` 연습문제가 있다.
+읽는 순서는 01 → 02 → 03 → 04 → 05 이며, 각 노트북 끝에 `직접 해보기` 연습문제가 있다.
+04 와 05 는 실험 산출물(`experiments/*/outputs/`)을 읽으므로 해당 스크립트를 먼저 완주해야 한다.
 
 ### 4.1 [`01_eda_report.ipynb`](eda/01_eda_report.ipynb) — 기초 EDA
 
@@ -196,9 +212,26 @@ python experiments/pseudo_labeling/pseudo_labeling.py
 ④ transductive 적합** 네 가지이고, 나머지(hist 피처, 반복 복사, GMM stratify, 가중 앙상블)는
 측정 가능한 기여가 없다.
 
+### 4.5 [`05_ablation.ipynb`](eda/05_ablation.ipynb) — Ablation 을 설계하고 읽는 법
+
+[`experiments/simplify/`](experiments/simplify/) 의 산출물(512그룹 · 설정 40개)을 읽어 7.3절의 결과를
+**ablation study 설계 원칙** 중심으로 다시 본다. 실행 몇 초.
+
+| 절 | 내용 |
+|---|---|
+| 대조군 검사 | `baseline_probe` 가 baseline QDA 를 비트 단위로 재현하는지 (`|diff| = 0`) — 안 되면 이후 숫자 전부 무효 |
+| forest plot | 부품 8개의 그룹별 Δ ± 95% CI. **결정적 3 / 무효 3 / 해로움 2** 로 갈린다 |
+| 대안 모델 | GMM 없는 접근(원시 QDA, 클래스별 GMM 생성분류기, diag)은 전부 0.93대 — "원리적으로 옳은 모델"이 표본 부족으로 무너지는 사례 |
+| 시드 분산 | 같은 설정이 시드에 따라 ±0.0005 — 재려는 효과보다 크다. **시드 1개로는 결론 금지** |
+| pooled vs 그룹별 | KernelPCA 는 그룹별로 무효지만 pooled 에 필요 — 지표 하나로 ablation 했다면 잘못 잘랐을 부품 |
+| 파레토 프론티어 | (fit 횟수, pooled AUC) 평면에서 baseline 은 프론티어에서 멀리 오른쪽 |
+
 ---
 
 ## 5. Baseline
+
+> **현재 기준 파이프라인은 5.3절의 `lean` 이다.** 5.1~5.2 의 baseline 은 원본 노트북을 옮긴 최초 기준으로,
+> 해부(7.3절)의 대상이자 비교 기준으로 남겨 둔다. 새 실험은 lean 위에서 한다.
 
 ### 5.1 Feature engineering
 
@@ -242,6 +275,30 @@ CV 는 target 이 아니라 **GMM 군집 라벨로 stratify** 한다.
 | `MLPClassifier` | hidden (16,), relu, lbfgs, tol 1e-6 |
 
 **Level 3** — level-1 평균 6열 + LGBM 메타 1열 + MLP 메타 1열 = **8열의 단순 평균**이 최종 예측.
+
+### 5.3 ★ 기준 파이프라인: `lean` — [`experiments/lean/`](experiments/lean/)
+
+7.3절의 해부 결과에서 **성능을 만드는 부품만 남긴 것**. 그룹마다 · 시드마다:
+
+```
+std > 2 인 컬럼 선택                        피처 선택 — 없으면 QDA 성립 불가
+-> KernelPCA(cosine, n_components=d)        차원 유지. 그룹 간 확률 스케일을 맞춘다 (그룹별 AUC 엔 무효, pooled 에 필요)
+-> GaussianMixture(5, full) 소속확률 x1      메커니즘. train+test 1024행으로 적합 (transductive)
+-> StandardScaler                           없으면 -0.0078
+-> QDA(reg_param=0.111)                     target 으로 stratify 한 5-fold OOF
+시드 {1,2,3,4} 의 OOF 평균                   시드 1개는 ±0.0005 흔들린다
+```
+
+baseline 에서 뺀 것: 나머지 5개 모델, LightGBM/MLP 메타, GMM 로그밀도 ×3, hist 밀도 피처,
+소속확률 ×5 반복복사, GMM 라벨 stratify(마지막 둘은 빼면 유의하게 좋아짐).
+
+| | pooled AUC | Δ 그룹별 vs baseline (95% CI) | fit/그룹 | 시간 |
+|---|---|---|---|---|
+| baseline (6모델 × 4config + 2 메타) | 0.949605 | — | ~136 + 메타 | 2,617s |
+| **lean, 시드 4개** | **0.949699** | +0.0005 [−0.0000, +0.0011] | **32** | **~509s** |
+
+**같은 성능을 1/5 시간, 모델 1종, 스태킹 없이** 낸다. "더 좋다"는 입증되지 않았다.
+`lean.py --check` 는 이 수치가 `simplify` 후속 실행의 `lean_4seeds` 와 비트 단위로 같은지 검사한다.
 
 ---
 
@@ -474,8 +531,8 @@ EDA 노트북 02~04 와 7절의 추가 실험 결과에 따라 우선순위를 �
   [04](eda/04_model_diagnostics.ipynb) 의 `logreg_l1` 사례(그룹별 최하위인데 pooled 2위)가
   같은 현상의 양면이다. 그룹 간 확률 스케일이 pooled AUC 의 실질적 병목인데,
   아직 이를 직접 다룬 실험이 없다. 그룹별 재보정이 pooled AUC 를 올리는지 측정할 가치가 있다
-- ~~**파이프라인 단순화**~~ — **완료 (7.3절).** `lean` 시드 4개 평균이 baseline 과 같은 점수를
-  1/5 시간에 낸다. 앞으로의 실험은 44분짜리 baseline 대신 이 파이프라인(8.5분) 위에서 하는 것이 맞다.
+- ~~**파이프라인 단순화**~~ — **완료 (7.3절 → 5.3절).** `lean` 이 기준 파이프라인으로 승격됐다
+  ([`experiments/lean/`](experiments/lean/), 8.5분). 앞으로의 실험은 44분짜리 baseline 대신 이 위에서 한다.
   단, KernelPCA 는 그룹 간 스케일을 맞추는 역할이라 빼면 안 되고, GMM stratify 와 반복복사는 빼는 게 낫다
 
 **하지 않아도 되는 것 (측정으로 기각됨)**
