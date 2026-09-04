@@ -76,8 +76,11 @@ Instant-Gratification/
     │   ├── denoise.py             #   Step 1: 내부 CV 로 노이즈 표시 → 제거/뒤집기 → 재적합
     │   ├── denoise_synthetic.py   #   Step 1-b: 진짜 라벨을 아는 합성 그룹에서 진짜 효과 측정
     │   └── outputs/
-    └── calibrate/                 # 추가 실험 5 — 그룹 간 확률 캘리브레이션 (7.5절)
-        ├── calibrate.py
+    ├── calibrate/                 # 추가 실험 5 — 그룹 간 확률 캘리브레이션 (7.5절)
+    │   ├── calibrate.py
+    │   └── outputs/
+    └── relabel/                   # 추가 실험 6 — flip 정정 + 정정 라벨 위의 ablation 재실행 (7.6절)
+        ├── relabel.py
         └── outputs/
 ```
 
@@ -154,6 +157,12 @@ python experiments/denoise/denoise_synthetic.py
 ```bash
 # 10) 그룹 간 캘리브레이션 (1분, 8 의 OOF 필요)
 python experiments/calibrate/calibrate.py
+```
+
+```bash
+# 11) flip 정정 + 정정 라벨 위의 ablation — 합성(6분) 과 실제(41분). eda/06 9절이 이 산출물을 읽는다
+python experiments/relabel/relabel.py --synthetic --n-groups 60 --seeds 1 2 --tag synth
+python experiments/relabel/relabel.py --seeds 1 2 --tag real
 ```
 
 ---
@@ -575,6 +584,9 @@ lean 의 outer fold 안에서 **학습 fold 만으로 내부 5-fold** 를 돌려
 계획했던 Step 3(denoise + pseudo labeling, reg 재스윕)과 Step 4(모델 다양성)는 천장 논리로 닫는다 —
 기대 이득이 남은 0.0003 을 넘을 수 없다. reg 재스윕은 위 표에 포함됐고(차이 없음), 나머지는 실행하지 않았다.
 
+> 이 실험의 방법(drop 중심, 탐지기 1회, 노이즈 라벨 위의 ablation)에 대한 지적을 받아 **flip 중심 · 반복 · 정정 라벨 위의
+> ablation 재실행**을 7.6절에서 수행했다. 결론은 같은 방향으로 더 강해졌다(oracle 라벨에서도 단순 모델은 lean 을 못 따라잡는다).
+
 ### 7.5 그룹 간 확률 캘리브레이션 — [`experiments/calibrate/`](experiments/calibrate/)
 
 7.3 과 [04](eda/04_model_diagnostics.ipynb) 에서 pooled AUC 와 그룹별 AUC 가 여러 번 갈렸다
@@ -599,6 +611,59 @@ lean 의 outer fold 안에서 **학습 fold 만으로 내부 5-fold** 를 돌려
 
 **결론: 회수할 것이 없다.** pooled/그룹별 분기는 그룹별 스케일 보정으로 고쳐지는 종류가 아니었다 —
 그룹 AUC 편차 자체가 그룹마다 걸린 flip 수에서 온다(7.4절 진단 C).
+
+### 7.6 flip 으로 다시 — 정정된 라벨 위에서 파이프라인과 ablation 재실행 — [`experiments/relabel/`](experiments/relabel/)
+
+7.4절에 대한 지적 세 가지에서 출발했다: ① 노이즈 행은 **버리지(drop) 말고 뒤집어야(flip)** 한다 — 다른 클래스의 완벽한 샘플이다
+② 정정 후 **라벨을 쓰는 단계를 전부 다시** 돌려야 한다(탐지기 포함, 반복) ③ **ablation 도 정정된 라벨 위에서 다시** —
+노이즈 5% 가 있을 때의 부품 중요도와 깨끗한 라벨에서의 중요도는 다를 수 있다.
+
+lean 의 피처(std 선택 · KernelPCA · GMM · scaler)는 라벨을 쓰지 않아 flip 으로 바뀌지 않으므로, 피처 집합 6개는 한 번 만들고
+그 위에서 **라벨 모드 {noisy, flip×1, flip×2, flip×3, (합성) oracle=진짜 라벨} × 파이프라인 11개** 를 전부 돌렸다.
+정정은 fold 마다 lean 탐지기 하나로 수행해 모든 파이프라인이 같은 라벨을 쓴다. 검증 라벨도 뒤집혀 있어 실제 데이터 AUC 는
+천장에 눌리므로, **진짜 라벨을 아는 합성 60그룹**에서 진짜 라벨 기준으로 ablation 을 읽는다. 대조군은 lean(시드 2개)을 비트 재현(|diff| = 0).
+
+#### 합성 — 진짜 라벨 기준 AUC (노이즈 5%)
+
+| 파이프라인 | noisy 라벨 | flip ×1 | **oracle (진짜 라벨로 학습)** |
+|---|---|---|---|
+| **lean** (KPCA + GMM proba + scaler + QDA) | 0.9998 | 0.9998 | **0.9999** |
+| −KernelPCA | 0.9999 | 0.9999 | 0.9999 |
+| −scaler | 0.9998 | 0.9998 | 0.9998 |
+| **−GMM proba** | 0.9878 | 0.9911 | **0.9916** |
+| **−transductive** | 0.9869 | 0.9898 | **0.9904** |
+| raw QDA (GMM 피처 없음) | 0.9881 | 0.9912 | 0.9917 |
+| raw 클래스별 GMM k=3 | 0.9874 | 0.9926 | 0.9936 |
+| lean 피처 + LDA (선형) | 0.9985 | 0.9980 | 0.9982 |
+
+정정 품질 (라운드별, 합성): ×1 은 행의 5.51% 를 뒤집어 **11,915개 맞음 / 1,620개 틀림(정밀도 88%)**, 남은 노이즈 5.0% → **0.78%**.
+×2 는 413 맞음 / **716 틀림**, ×3 은 157 / 489 — 반복할수록 노이즈가 다시 늘어난다(0.90% → 1.04%). **반복은 1회가 최선.**
+
+#### 실제 데이터 — pooled AUC (뒤집힌 라벨로 채점, 시드 2개)
+
+| 파이프라인 | noisy | flip ×1 | flip ×3 |
+|---|---|---|---|
+| lean | 0.949684 | 0.949665 | 0.949566 |
+| −KernelPCA / −scaler | 0.949385 / 0.950080 | 0.949487 / 0.949821 | 0.949500 / 0.949670 |
+| −GMM proba / −transductive | 0.937960 / 0.937132 | 0.941224 / 0.940169 | 0.940941 / 0.939827 |
+| raw QDA / raw 클래스별 GMM k=3 | 0.938327 / 0.938426 | 0.941657 / 0.943679 | 0.941366 / 0.943347 |
+
+#### 읽기
+
+- **flip 은 노이즈에 상한 모델만 살린다.** GMM 피처가 없는 단순 모델들은 flip ×1 로 진짜 라벨 AUC 가 +0.003~0.005 오르며
+  oracle 의 75~85% 를 회수한다. lean 은 이미 0.9998 이라 변화가 없다(노이즈에 강함).
+- **oracle 라벨로도 단순 모델은 lean 을 따라잡지 못한다** — 완벽한 라벨로 학습해도 raw QDA 0.9917, 클래스별 GMM 0.9936 vs lean 0.9999.
+  **GMM 소속확률과 transductive 적합은 노이즈 보상 장치가 아니라, 깨끗한 라벨에서도 필요한 부품**이다.
+  "라벨을 정정하면 더 단순한 모델로 충분하다"는 가설은 가장 강한 형태(oracle)에서 기각됐다.
+- **ablation 순위는 라벨을 정정해도 바뀌지 않는다.** 결정적 부품(GMM proba, transductive)은 oracle 에서도 결정적(−0.008)이고,
+  KernelPCA 와 scaler 는 진짜 라벨 기준으로 그룹 안 성능에 무효다(−KernelPCA 가 오히려 0.9999). KernelPCA 의 역할은 7.3절의 결론 그대로
+  **그룹 간 스케일**(실제 pooled −0.0003)이다.
+- 실제 데이터의 lean 계열 값(0.9494~0.9501)은 전부 천장 1−f ≈ 0.95 의 표본 잡음(±0.0004) 안이라 서로 구분되지 않는다. flip 이 lean 의
+  점수를 올리지 못하는 이유는 7.4절과 같다 — 채점 라벨의 5% 는 맞힐 수 없다.
+- 덤: lean 피처 위에서는 **선형 모델(LDA)도 0.9985** — GMM 소속확률이 문제를 거의 선형 분리 가능하게 만든다.
+
+**판정**: 지적 ①②③은 방법론으로서 옳았고, 실행한 결과 7.4절의 결론이 더 강한 형태로 확정됐다 —
+flip 은 drop 과 동등하고(둘 다 lean 에 영향 없음), 반복은 1회가 최선이며, **정정된 라벨(oracle 포함) 위에서도 lean 의 부품 구성은 그대로 필요하다.**
 
 ---
 

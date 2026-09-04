@@ -1,0 +1,19 @@
+[relabel] mode=real seeds=[1, 2] tau=0.9 rounds=3 pipelines=11 label_modes=['noisy', 'flip_r1', 'flip_r2', 'flip_r3']
+[relabel] groups=512 train_rows=262144
+[relabel] seed 1 done (1177s)
+[relabel] seed 2 done (1229s)
+[relabel] SUMMARY pooled AUC (noisy labels)
+[relabel] pipeline                           noisy           flip_r1           flip_r2           flip_r3
+[relabel] lean|qda                        0.949684          0.949665          0.949615          0.949566
+[relabel] -kpca|qda                       0.949385          0.949487          0.949496          0.949500
+[relabel] -gmm|qda                        0.937960          0.941224          0.941103          0.940941
+[relabel] -scaler|qda                     0.950080          0.949821          0.949732          0.949670
+[relabel] -transductive|qda               0.937132          0.940169          0.940021          0.939827
+[relabel] raw|qda                         0.938327          0.941657          0.941518          0.941366
+[relabel] raw|qda_reg0.5                  0.934803          0.937697          0.937519          0.937357
+[relabel] raw|lda                         0.790381          0.796121          0.795799          0.795584
+[relabel] raw|gmm_bayes_k1                0.938296          0.941677          0.941540          0.941389
+[relabel] raw|gmm_bayes_k3                0.938426          0.943679          0.943567          0.943347
+[relabel] lean|lda                        0.947850          0.947439          0.947287          0.947171
+[relabel] REPRODUCTION CHECK noisy/lean vs simplify lean_2seeds: |diff|=0.00e+00 -> OK
+[relabel] done in 2462.9s

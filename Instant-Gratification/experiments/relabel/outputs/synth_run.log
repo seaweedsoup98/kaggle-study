@@ -1,0 +1,21 @@
+[relabel] mode=synthetic seeds=[1, 2] tau=0.9 rounds=3 pipelines=11 label_modes=['noisy', 'flip_r1', 'flip_r2', 'flip_r3', 'oracle']
+[relabel] groups=60 train_rows=30720
+[relabel] seed 1 done (173s)
+[relabel] seed 2 done (155s)
+[relabel] SUMMARY pooled AUC (noisy | TRUE labels)
+[relabel] pipeline                           noisy           flip_r1           flip_r2           flip_r3            oracle
+[relabel] lean|qda                   0.9492|0.9998     0.9494|0.9998     0.9493|0.9998     0.9492|0.9998     0.9496|0.9999
+[relabel] -kpca|qda                  0.9488|0.9999     0.9488|0.9999     0.9488|0.9999     0.9488|0.9999     0.9489|0.9999
+[relabel] -gmm|qda                   0.9391|0.9878     0.9417|0.9911     0.9417|0.9910     0.9414|0.9909     0.9423|0.9916
+[relabel] -scaler|qda                0.9486|0.9998     0.9490|0.9998     0.9490|0.9997     0.9490|0.9997     0.9492|0.9998
+[relabel] -transductive|qda          0.9384|0.9869     0.9409|0.9898     0.9408|0.9897     0.9406|0.9895     0.9416|0.9904
+[relabel] raw|qda                    0.9387|0.9881     0.9414|0.9912     0.9413|0.9912     0.9411|0.9910     0.9419|0.9917
+[relabel] raw|qda_reg0.5             0.9351|0.9840     0.9374|0.9867     0.9373|0.9865     0.9370|0.9864     0.9380|0.9872
+[relabel] raw|lda                    0.7912|0.8233     0.7970|0.8299     0.7969|0.8297     0.7966|0.8294     0.7980|0.8307
+[relabel] raw|gmm_bayes_k1           0.9387|0.9881     0.9414|0.9913     0.9414|0.9912     0.9411|0.9911     0.9420|0.9917
+[relabel] raw|gmm_bayes_k3           0.9396|0.9874     0.9439|0.9926     0.9433|0.9931     0.9434|0.9928     0.9445|0.9936
+[relabel] lean|lda                   0.9479|0.9985     0.9476|0.9980     0.9476|0.9979     0.9476|0.9978     0.9480|0.9982
+[relabel] CLEAN flip_r1: flipped=0.0551 of rows, correct=11915, wrong=1620, remaining noise=0.0078 (started at 0.05)
+[relabel] CLEAN flip_r2: flipped=0.0046 of rows, correct=413, wrong=716, remaining noise=0.0090 (started at 0.05)
+[relabel] CLEAN flip_r3: flipped=0.0026 of rows, correct=157, wrong=489, remaining noise=0.0104 (started at 0.05)
+[relabel] done in 337.2s
