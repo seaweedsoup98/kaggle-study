@@ -1,0 +1,10 @@
+[synth] lean_control     AUC(noisy)=0.9491 AUC(true)=0.9992 removed=0.0000 precision=None
+[synth] raw_control      AUC(noisy)=0.9379 AUC(true)=0.9861 removed=0.0000 precision=None
+[synth] raw_reg0.5       AUC(noisy)=0.9342 AUC(true)=0.9820 removed=0.0000 precision=None
+[synth] lean_drop_0.9    AUC(noisy)=0.9493 AUC(true)=0.9992 removed=0.0553 precision=0.882
+[synth] raw_drop_0.9     AUC(noisy)=0.9396 AUC(true)=0.9878 removed=0.0696 precision=0.605
+[synth] lean_flip_0.9    AUC(noisy)=0.9492 AUC(true)=0.9991 removed=0.0553 precision=0.882
+[synth] lean_drop_0.99   AUC(noisy)=0.9493 AUC(true)=0.9992 removed=0.0508 precision=0.933
+[synth] raw_drop_0.99    AUC(noisy)=0.9402 AUC(true)=0.9884 removed=0.0451 precision=0.792
+[synth] lean_flip_0.99   AUC(noisy)=0.9492 AUC(true)=0.9992 removed=0.0508 precision=0.933
+[synth] done in 28.1s

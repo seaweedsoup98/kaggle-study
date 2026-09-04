@@ -1,0 +1,359 @@
+{
+  "config": {
+    "magic_limit": 512,
+    "seeds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "taus": [
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "flip_taus": [
+      0.9,
+      0.95
+    ],
+    "best_tau_guess": 0.9,
+    "extra_reg": [
+      0.05,
+      0.3
+    ]
+  },
+  "results": {
+    "control": {
+      "cfg": {
+        "name": "control",
+        "tau": 1.0,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9496986067990791,
+      "per_seed_pooled": [
+        0.9495458618928531,
+        0.9491905064793731,
+        0.9494345813886201,
+        0.9484687601201569
+      ],
+      "group_auc_mean": 0.9479129900494272,
+      "vs_control": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "wins": 0,
+        "n": 512
+      },
+      "removed_frac_mean": 0.0,
+      "cancelled_folds": 0
+    },
+    "drop_0.8": {
+      "cfg": {
+        "name": "drop_0.8",
+        "tau": 0.8,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9497973362472879,
+      "per_seed_pooled": [
+        0.9492216340156657,
+        0.9489024758220312,
+        0.9492637942611429,
+        0.9486026156799361
+      ],
+      "group_auc_mean": 0.9493739342347907,
+      "vs_control": {
+        "mean": 0.0014609441853634868,
+        "ci_low": 0.0011637388935702548,
+        "ci_high": 0.0017581494771567187,
+        "wins": 353,
+        "n": 512
+      },
+      "removed_frac_mean": 0.05784884216045194,
+      "cancelled_folds": 0
+    },
+    "drop_0.9": {
+      "cfg": {
+        "name": "drop_0.9",
+        "tau": 0.9,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9498216441449046,
+      "per_seed_pooled": [
+        0.9492642702833953,
+        0.9489482369389421,
+        0.9493099967085401,
+        0.9486430921815051
+      ],
+      "group_auc_mean": 0.9493888691667505,
+      "vs_control": {
+        "mean": 0.001475879117323371,
+        "ci_low": 0.0011805023959611338,
+        "ci_high": 0.0017712558386856084,
+        "wins": 354,
+        "n": 512
+      },
+      "removed_frac_mean": 0.05552473995128314,
+      "cancelled_folds": 0
+    },
+    "drop_0.95": {
+      "cfg": {
+        "name": "drop_0.95",
+        "tau": 0.95,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9498187596642599,
+      "per_seed_pooled": [
+        0.9492857836312034,
+        0.9489905751252397,
+        0.9493279677709257,
+        0.9486800342556858
+      ],
+      "group_auc_mean": 0.9493620305207997,
+      "vs_control": {
+        "mean": 0.0014490404713725737,
+        "ci_low": 0.0011541517941217401,
+        "ci_high": 0.0017439291486234074,
+        "wins": 357,
+        "n": 512
+      },
+      "removed_frac_mean": 0.053757306268908255,
+      "cancelled_folds": 0
+    },
+    "drop_0.99": {
+      "cfg": {
+        "name": "drop_0.99",
+        "tau": 0.99,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9498251327628637,
+      "per_seed_pooled": [
+        0.949301630550517,
+        0.9490778199981906,
+        0.9493830618460064,
+        0.9487308457603103
+      ],
+      "group_auc_mean": 0.9493116845932742,
+      "vs_control": {
+        "mean": 0.0013986945438470148,
+        "ci_low": 0.001108235533579061,
+        "ci_high": 0.0016891535541149684,
+        "wins": 354,
+        "n": 512
+      },
+      "removed_frac_mean": 0.050740151472801566,
+      "cancelled_folds": 0
+    },
+    "flip_0.9": {
+      "cfg": {
+        "name": "flip_0.9",
+        "tau": 0.9,
+        "action": "flip",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9498518148636643,
+      "per_seed_pooled": [
+        0.9492431246042782,
+        0.948946161777617,
+        0.9492338271818856,
+        0.9485466787579231
+      ],
+      "group_auc_mean": 0.9493778871517333,
+      "vs_control": {
+        "mean": 0.001464897102306228,
+        "ci_low": 0.0011495757421276882,
+        "ci_high": 0.001780218462484768,
+        "wins": 342,
+        "n": 512
+      },
+      "removed_frac_mean": 0.05552473995128314,
+      "cancelled_folds": 0
+    },
+    "flip_0.95": {
+      "cfg": {
+        "name": "flip_0.95",
+        "tau": 0.95,
+        "action": "flip",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9498451603601228,
+      "per_seed_pooled": [
+        0.9492558678037917,
+        0.9489829468948396,
+        0.949290235324019,
+        0.9486133823219021
+      ],
+      "group_auc_mean": 0.9493804356236293,
+      "vs_control": {
+        "mean": 0.0014674455742020788,
+        "ci_low": 0.0011559708065428291,
+        "ci_high": 0.0017789203418613285,
+        "wins": 341,
+        "n": 512
+      },
+      "removed_frac_mean": 0.053757306268908255,
+      "cancelled_folds": 0
+    },
+    "drop_0.9_r2": {
+      "cfg": {
+        "name": "drop_0.9_r2",
+        "tau": 0.9,
+        "action": "drop",
+        "rounds": 2,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9498221415875762,
+      "per_seed_pooled": [
+        0.9490261512693414,
+        0.9487593768565689,
+        0.9490710404063855,
+        0.9483837640419839
+      ],
+      "group_auc_mean": 0.9494526863380361,
+      "vs_control": {
+        "mean": 0.0015396962886090034,
+        "ci_low": 0.0012449386593654825,
+        "ci_high": 0.0018344539178525242,
+        "wins": 349,
+        "n": 512
+      },
+      "removed_frac_mean": 0.05899679059601827,
+      "cancelled_folds": 0
+    },
+    "drop_0.9_reg0.05": {
+      "cfg": {
+        "name": "drop_0.9_reg0.05",
+        "tau": 0.9,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.05,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9498507578416429,
+      "per_seed_pooled": [
+        0.9490217264684653,
+        0.9488671953437438,
+        0.9492527267728805,
+        0.9485326138661533
+      ],
+      "group_auc_mean": 0.949366616150999,
+      "vs_control": {
+        "mean": 0.001453626101571932,
+        "ci_low": 0.0011440772326005407,
+        "ci_high": 0.0017631749705433234,
+        "wins": 352,
+        "n": 512
+      },
+      "removed_frac_mean": 0.05666056673330229,
+      "cancelled_folds": 0
+    },
+    "drop_0.9_reg0.3": {
+      "cfg": {
+        "name": "drop_0.9_reg0.3",
+        "tau": 0.9,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.3,
+        "features": "lean"
+      },
+      "pooled_auc": 0.9497470482041597,
+      "per_seed_pooled": [
+        0.9493013502224213,
+        0.9489525500975244,
+        0.9492382332689986,
+        0.9486005165079507
+      ],
+      "group_auc_mean": 0.9493966926941645,
+      "vs_control": {
+        "mean": 0.0014837026447373123,
+        "ci_low": 0.0011998628198293887,
+        "ci_high": 0.0017675424696452359,
+        "wins": 355,
+        "n": 512
+      },
+      "removed_frac_mean": 0.05283008044039032,
+      "cancelled_folds": 0
+    },
+    "raw_control": {
+      "cfg": {
+        "name": "raw_control",
+        "tau": 1.0,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "raw"
+      },
+      "pooled_auc": 0.9393008404018904,
+      "per_seed_pooled": [
+        0.9365873846919731,
+        0.9363022682302871,
+        0.9365976163182224,
+        0.9363063645944355
+      ],
+      "group_auc_mean": 0.9387577198297422,
+      "vs_control": {
+        "mean": -0.009155270219685,
+        "ci_low": -0.009775931259865821,
+        "ci_high": -0.008534609179504177,
+        "wins": 48,
+        "n": 512
+      },
+      "removed_frac_mean": 0.0,
+      "cancelled_folds": 0
+    },
+    "raw_drop_0.9": {
+      "cfg": {
+        "name": "raw_drop_0.9",
+        "tau": 0.9,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "raw"
+      },
+      "pooled_auc": 0.9409734591671556,
+      "per_seed_pooled": [
+        0.9384097525315637,
+        0.9382350966901007,
+        0.9384341594404119,
+        0.9381040292190793
+      ],
+      "group_auc_mean": 0.9408367769763553,
+      "vs_control": {
+        "mean": -0.007076213073071819,
+        "ci_low": -0.007692984347796512,
+        "ci_high": -0.006459441798347126,
+        "wins": 86,
+        "n": 512
+      },
+      "removed_frac_mean": 0.07034840050827021,
+      "cancelled_folds": 0
+    }
+  },
+  "reproduction_check": {
+    "lean_final_auc": 0.9496986067990791,
+    "control_auc": 0.9496986067990791,
+    "abs_diff": 0.0
+  },
+  "best": "flip_0.9",
+  "elapsed_sec": 1422.3
+}

@@ -1,0 +1,103 @@
+{
+  "input": "C:\\Users\\jiho\\code\\kaggle-study\\Instant-Gratification\\experiments\\lean\\outputs\\lean_oof_train.npy",
+  "raw_pooled_auc": 0.9496986067990791,
+  "results": {
+    "temperature": {
+      "pooled_auc": 0.949061541294447,
+      "delta_vs_raw": -0.0006370655046321616,
+      "boot_ci_low": -0.0010183431445567215,
+      "boot_ci_high": -0.0002918502540775112,
+      "group_auc_mean": 0.9469634960875863
+    },
+    "platt": {
+      "pooled_auc": 0.9487555141379718,
+      "delta_vs_raw": -0.0009430926611073698,
+      "boot_ci_low": -0.001282153445488521,
+      "boot_ci_high": -0.0006102543154187097,
+      "group_auc_mean": 0.9461135477950355
+    },
+    "bias": {
+      "pooled_auc": 0.9487905488344106,
+      "delta_vs_raw": -0.0009080579646685294,
+      "boot_ci_low": -0.001300198421299023,
+      "boot_ci_high": -0.00043852320255904947,
+      "group_auc_mean": 0.9472206617526873
+    },
+    "rank": {
+      "pooled_auc": 0.9484037598287561,
+      "delta_vs_raw": -0.0012948469703230048,
+      "boot_ci_low": -0.0016272897330869395,
+      "boot_ci_high": -0.0010023510177436304,
+      "group_auc_mean": 0.9489343315451633
+    },
+    "zscore": {
+      "pooled_auc": 0.948852666944369,
+      "delta_vs_raw": -0.0008459398547101538,
+      "boot_ci_low": -0.0011410029931311183,
+      "boot_ci_high": -0.0005381059861291839,
+      "group_auc_mean": 0.9489343315451633
+    },
+    "clip_1e-06": {
+      "pooled_auc": 0.9496092066128535,
+      "delta_vs_raw": -8.940018622560775e-05,
+      "group_auc_mean": 0.9489343315451633,
+      "frac_clipped": 0.5344696044921875
+    },
+    "clip_0.0001": {
+      "pooled_auc": 0.9496510417685436,
+      "delta_vs_raw": -4.7565030535490216e-05,
+      "group_auc_mean": 0.9493723516265705,
+      "frac_clipped": 0.7382125854492188
+    },
+    "clip_0.001": {
+      "pooled_auc": 0.9497974416904661,
+      "delta_vs_raw": 9.883489138695634e-05,
+      "group_auc_mean": 0.9496531540299352,
+      "frac_clipped": 0.830047607421875
+    },
+    "clip_0.01": {
+      "pooled_auc": 0.9498316882260697,
+      "delta_vs_raw": 0.00013308142699053338,
+      "group_auc_mean": 0.9497802481462718,
+      "frac_clipped": 0.9027366638183594
+    },
+    "clip_0.03": {
+      "pooled_auc": 0.949727041503451,
+      "delta_vs_raw": 2.8434704371860242e-05,
+      "group_auc_mean": 0.9497155368357967,
+      "frac_clipped": 0.9303932189941406
+    },
+    "clip_0.05": {
+      "pooled_auc": 0.9497087474176503,
+      "delta_vs_raw": 1.0140618571186089e-05,
+      "group_auc_mean": 0.9497101175440263,
+      "frac_clipped": 0.9418487548828125
+    },
+    "clip_0.1": {
+      "pooled_auc": 0.9497344974973816,
+      "delta_vs_raw": 3.589069830245428e-05,
+      "group_auc_mean": 0.9497580315688756,
+      "frac_clipped": 0.9568138122558594
+    },
+    "temperature_insample_upper_bound": {
+      "pooled_auc": 0.9512515829475205,
+      "delta_vs_raw": 0.0015529761484414095,
+      "group_auc_mean": 0.9489343315451633,
+      "note": "optimistic: fit and applied on the same rows"
+    },
+    "platt_insample_upper_bound": {
+      "pooled_auc": 0.9519329025145105,
+      "delta_vs_raw": 0.0022342957154313225,
+      "group_auc_mean": 0.9489343315451633,
+      "note": "optimistic: fit and applied on the same rows"
+    },
+    "bias_insample_upper_bound": {
+      "pooled_auc": 0.9512133874295662,
+      "delta_vs_raw": 0.0015147806304870448,
+      "group_auc_mean": 0.9489343315451633,
+      "note": "optimistic: fit and applied on the same rows"
+    }
+  },
+  "best_label_method": "temperature",
+  "elapsed_sec": 62.5
+}

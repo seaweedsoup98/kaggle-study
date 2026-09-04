@@ -1,0 +1,21 @@
+[denoise] configs=12: ['control', 'drop_0.8', 'drop_0.9', 'drop_0.95', 'drop_0.99', 'flip_0.9', 'flip_0.95', 'drop_0.9_r2', 'drop_0.9_reg0.05', 'drop_0.9_reg0.3', 'raw_control', 'raw_drop_0.9']
+[denoise] loading data ...
+[denoise] seed 1 done (343s): control=0.94955 drop_0.8=0.94922 drop_0.9=0.94926 drop_0.95=0.94929
+[denoise] seed 2 done (352s): control=0.94919 drop_0.8=0.94890 drop_0.9=0.94895 drop_0.95=0.94899
+[denoise] seed 3 done (350s): control=0.94943 drop_0.8=0.94926 drop_0.9=0.94931 drop_0.95=0.94933
+[denoise] seed 4 done (349s): control=0.94847 drop_0.8=0.94860 drop_0.9=0.94864 drop_0.95=0.94868
+[denoise] control              pooled=0.949699 group_mean=0.947913 removed=0.0000 vs_control=+0.00000 [+0.00000,+0.00000] wins=0/512
+[denoise] drop_0.8             pooled=0.949797 group_mean=0.949374 removed=0.0578 vs_control=+0.00146 [+0.00116,+0.00176] wins=353/512
+[denoise] drop_0.9             pooled=0.949822 group_mean=0.949389 removed=0.0555 vs_control=+0.00148 [+0.00118,+0.00177] wins=354/512
+[denoise] drop_0.95            pooled=0.949819 group_mean=0.949362 removed=0.0538 vs_control=+0.00145 [+0.00115,+0.00174] wins=357/512
+[denoise] drop_0.99            pooled=0.949825 group_mean=0.949312 removed=0.0507 vs_control=+0.00140 [+0.00111,+0.00169] wins=354/512
+[denoise] flip_0.9             pooled=0.949852 group_mean=0.949378 removed=0.0555 vs_control=+0.00146 [+0.00115,+0.00178] wins=342/512
+[denoise] flip_0.95            pooled=0.949845 group_mean=0.949380 removed=0.0538 vs_control=+0.00147 [+0.00116,+0.00178] wins=341/512
+[denoise] drop_0.9_r2          pooled=0.949822 group_mean=0.949453 removed=0.0590 vs_control=+0.00154 [+0.00124,+0.00183] wins=349/512
+[denoise] drop_0.9_reg0.05     pooled=0.949851 group_mean=0.949367 removed=0.0567 vs_control=+0.00145 [+0.00114,+0.00176] wins=352/512
+[denoise] drop_0.9_reg0.3      pooled=0.949747 group_mean=0.949397 removed=0.0528 vs_control=+0.00148 [+0.00120,+0.00177] wins=355/512
+[denoise] raw_control          pooled=0.939301 group_mean=0.938758 removed=0.0000 vs_control=-0.00916 [-0.00978,-0.00853] wins=48/512
+[denoise] raw_drop_0.9         pooled=0.940973 group_mean=0.940837 removed=0.0703 vs_control=-0.00708 [-0.00769,-0.00646] wins=86/512
+[denoise] REPRODUCTION CHECK control vs lean: |diff|=0.00e+00 -> OK (bit-level)
+[denoise] BEST (lean features): flip_0.9 pooled=0.949852 (+0.000153 vs control)
+[denoise] done in 1422.3s

@@ -1,0 +1,133 @@
+{
+  "n_groups": 60,
+  "flip": 0.05,
+  "results": {
+    "lean_control": {
+      "cfg": {
+        "name": "lean_control",
+        "tau": 1.0,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "auc_noisy_labels": 0.9490550878584768,
+      "auc_true_labels": 0.9992204795205325,
+      "removed_frac": 0.0,
+      "removed_precision": null
+    },
+    "raw_control": {
+      "cfg": {
+        "name": "raw_control",
+        "tau": 1.0,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "raw"
+      },
+      "auc_noisy_labels": 0.9379053433414672,
+      "auc_true_labels": 0.9860872097304956,
+      "removed_frac": 0.0,
+      "removed_precision": null
+    },
+    "raw_reg0.5": {
+      "cfg": {
+        "name": "raw_reg0.5",
+        "tau": 1.0,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.5,
+        "features": "raw"
+      },
+      "auc_noisy_labels": 0.9341745371710095,
+      "auc_true_labels": 0.9820180467906838,
+      "removed_frac": 0.0,
+      "removed_precision": null
+    },
+    "lean_drop_0.9": {
+      "cfg": {
+        "name": "lean_drop_0.9",
+        "tau": 0.9,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "auc_noisy_labels": 0.9492651623365921,
+      "auc_true_labels": 0.9991762521146513,
+      "removed_frac": 0.0552736994851611,
+      "removed_precision": 0.8824542919428431
+    },
+    "raw_drop_0.9": {
+      "cfg": {
+        "name": "raw_drop_0.9",
+        "tau": 0.9,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "raw"
+      },
+      "auc_noisy_labels": 0.9396199791791767,
+      "auc_true_labels": 0.9878002084319022,
+      "removed_frac": 0.06957244518655455,
+      "removed_precision": 0.6054245785246223
+    },
+    "lean_flip_0.9": {
+      "cfg": {
+        "name": "lean_flip_0.9",
+        "tau": 0.9,
+        "action": "flip",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "auc_noisy_labels": 0.949185652987836,
+      "auc_true_labels": 0.9990865193726698,
+      "removed_frac": 0.0552736994851611,
+      "removed_precision": 0.8824542919428431
+    },
+    "lean_drop_0.99": {
+      "cfg": {
+        "name": "lean_drop_0.99",
+        "tau": 0.99,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "auc_noisy_labels": 0.9492984054968818,
+      "auc_true_labels": 0.9992445334309619,
+      "removed_frac": 0.05078953227185083,
+      "removed_precision": 0.9329892110657926
+    },
+    "raw_drop_0.99": {
+      "cfg": {
+        "name": "raw_drop_0.99",
+        "tau": 0.99,
+        "action": "drop",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "raw"
+      },
+      "auc_noisy_labels": 0.9402020205882017,
+      "auc_true_labels": 0.9883951305136568,
+      "removed_frac": 0.045100940227006184,
+      "removed_precision": 0.7915887797411769
+    },
+    "lean_flip_0.99": {
+      "cfg": {
+        "name": "lean_flip_0.99",
+        "tau": 0.99,
+        "action": "flip",
+        "rounds": 1,
+        "reg": 0.111,
+        "features": "lean"
+      },
+      "auc_noisy_labels": 0.9492039021815919,
+      "auc_true_labels": 0.9992068864120308,
+      "removed_frac": 0.05078953227185083,
+      "removed_precision": 0.9329892110657926
+    }
+  },
+  "elapsed_sec": 28.1
+}

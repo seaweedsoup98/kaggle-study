@@ -1,0 +1,18 @@
+[calib] input=lean_oof_train.npy raw pooled AUC=0.949699 group-mean AUC=0.947913
+[calib] temperature  pooled=0.949062 delta=-0.000637 boot95%=[-0.001018,-0.000292] group_mean=0.946963
+[calib] platt        pooled=0.948756 delta=-0.000943 boot95%=[-0.001282,-0.000610] group_mean=0.946114
+[calib] bias         pooled=0.948791 delta=-0.000908 boot95%=[-0.001300,-0.000439] group_mean=0.947221
+[calib] rank         pooled=0.948404 delta=-0.001295 boot95%=[-0.001627,-0.001002] group_mean=0.948934
+[calib] zscore       pooled=0.948853 delta=-0.000846 boot95%=[-0.001141,-0.000538] group_mean=0.948934
+[calib] clip eps=1e-06           pooled=0.949609 delta=-0.000089 group_mean=0.948934 clipped=0.534
+[calib] clip eps=0.0001          pooled=0.949651 delta=-0.000048 group_mean=0.949372 clipped=0.738
+[calib] clip eps=0.001           pooled=0.949797 delta=+0.000099 group_mean=0.949653 clipped=0.830
+[calib] clip eps=0.01            pooled=0.949832 delta=+0.000133 group_mean=0.949780 clipped=0.903
+[calib] clip eps=0.03            pooled=0.949727 delta=+0.000028 group_mean=0.949716 clipped=0.930
+[calib] clip eps=0.05            pooled=0.949709 delta=+0.000010 group_mean=0.949710 clipped=0.942
+[calib] clip eps=0.1             pooled=0.949734 delta=+0.000036 group_mean=0.949758 clipped=0.957
+[calib] temperature (in-sample UB) pooled=0.951252 delta=+0.001553  <- optimistic upper bound
+[calib] platt (in-sample UB)     pooled=0.951933 delta=+0.002234  <- optimistic upper bound
+[calib] bias (in-sample UB)      pooled=0.951213 delta=+0.001515  <- optimistic upper bound
+[calib] BEST label-based (cross-fitted): temperature delta=-0.000637
+[calib] done in 62.5s
