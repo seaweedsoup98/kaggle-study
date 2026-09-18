@@ -1,0 +1,28 @@
+{
+  "id": "kyakovlev/ieee-basic-fe-part-1",
+  "id_no": 6073766,
+  "title": "IEEE - Basic FE - part 1",
+  "code_file": "ieee-basic-fe-part-1.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "pandas",
+    "numpy",
+    "lightgbm",
+    "sklearn"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "kyakovlev/ieee-data-minification-private"
+  ],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:85d962b59d0b84b39ccbc3327696bb8790bfb63ba5b837ded2512509103bf426",
+  "machine_shape": "None"
+}

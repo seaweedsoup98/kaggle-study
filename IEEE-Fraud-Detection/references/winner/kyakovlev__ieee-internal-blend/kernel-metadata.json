@@ -1,0 +1,28 @@
+{
+  "id": "kyakovlev/ieee-internal-blend",
+  "id_no": 5582867,
+  "title": "IEEE - Internal Blend",
+  "code_file": "ieee-internal-blend.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "pandas"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "kyakovlev/ieee-cv-options",
+    "kyakovlev/ieee-simple-lgbm",
+    "kyakovlev/ieee-lgbm-with-groupkfold-cv",
+    "kyakovlev/ieee-catboost-baseline-with-groupkfold-cv"
+  ],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+  "machine_shape": "None"
+}

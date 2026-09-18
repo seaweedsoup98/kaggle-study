@@ -1,0 +1,79 @@
+{
+  "scope": "monthly sampled smoke",
+  "train_rows": 30000,
+  "test_rows": 30002,
+  "features": 720,
+  "folds": [
+    {
+      "fold": 0,
+      "months": [
+        12
+      ],
+      "auc": 0.810771139369903,
+      "best_iteration": 99
+    },
+    {
+      "fold": 1,
+      "months": [
+        15
+      ],
+      "auc": 0.8689919427624346,
+      "best_iteration": 98
+    },
+    {
+      "fold": 2,
+      "months": [
+        13
+      ],
+      "auc": 0.8569630498453266,
+      "best_iteration": 99
+    },
+    {
+      "fold": 3,
+      "months": [
+        17
+      ],
+      "auc": 0.8658694978330775,
+      "best_iteration": 83
+    },
+    {
+      "fold": 4,
+      "months": [
+        14
+      ],
+      "auc": 0.8925266106442578,
+      "best_iteration": 99
+    },
+    {
+      "fold": 5,
+      "months": [
+        16
+      ],
+      "auc": 0.8890580338221425,
+      "best_iteration": 55
+    }
+  ],
+  "params": {
+    "iterations": 100,
+    "learning_rate": 0.07,
+    "eval_metric": "AUC",
+    "loss_function": "Logloss",
+    "random_seed": 42,
+    "metric_period": 500,
+    "od_wait": 500,
+    "task_type": "GPU",
+    "depth": 8,
+    "thread_count": 8
+  },
+  "rounds": 100,
+  "target_mean": "fold-local",
+  "numeric_precision": "float32, not source float16",
+  "oof_auc": 0.8578456173905451,
+  "source_scaled_oof_auc": 0.8581566067339157,
+  "elapsed_seconds": 42.789626200217754,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "catboost": "1.2.10"
+  }
+}

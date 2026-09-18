@@ -1,0 +1,29 @@
+{
+  "id": "kyakovlev/ieee-fe-with-some-eda",
+  "id_no": 5547986,
+  "title": "IEEE - FE with some EDA",
+  "code_file": "ieee-fe-with-some-eda.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "matplotlib",
+    "lightgbm",
+    "numpy",
+    "pandas",
+    "sklearn"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "kyakovlev/ieee-data-minification"
+  ],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+  "machine_shape": "None"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "cdeotte/eda-for-columns-v-and-id",
+  "id_no": 6076741,
+  "title": "EDA for Columns V and ID",
+  "code_file": "eda-for-columns-v-and-id.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "seaborn",
+    "pandas",
+    "numpy",
+    "matplotlib"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:85d962b59d0b84b39ccbc3327696bb8790bfb63ba5b837ded2512509103bf426",
+  "machine_shape": "None"
+}

@@ -1,0 +1,11 @@
+train=(30000, 213) test=(30002, 213) monthly rows={12: 6976, 13: 4703, 14: 4370, 15: 5163, 16: 4250, 17: 4538} device=cuda
+V=120 features95=216 features96=263
+xgb96 time holdout AUC=0.860963 best_iteration=41
+xgb96 fold=0 months=[12] AUC=0.818325 best_iteration=89
+xgb96 fold=1 months=[15] AUC=0.881375 best_iteration=99
+xgb96 fold=2 months=[13] AUC=0.848890 best_iteration=98
+xgb96 fold=3 months=[17] AUC=0.889826 best_iteration=88
+xgb96 fold=4 months=[14] AUC=0.900469 best_iteration=96
+xgb96 fold=5 months=[16] AUC=0.884413 best_iteration=84
+xgb96 pooled OOF AUC=0.862225
+saved C:\Users\jiho\code\kaggle-study\IEEE-Fraud-Detection\experiments\winner_xgb\outputs\smoke elapsed=17.7s scope=monthly sampled smoke

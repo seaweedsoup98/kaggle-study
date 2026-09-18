@@ -1,0 +1,489 @@
+{
+  "reviewed_on": "2026-09-18",
+  "scope": "Part 2 and its eight direct body links",
+  "source_download": "official Kaggle API kernels_pull; fetched current public source, not pinned to a claimed 2019 version",
+  "resources": [
+    {
+      "key": "part2",
+      "title": "FraudSquad 1st place Part 2",
+      "url": "https://www.kaggle.com/competitions/ieee-fraud-detection/writeups/fraudsquad-1st-place-solution-part-2",
+      "access": "public",
+      "review_method": "browser-rendered discussion/writeup main body"
+    },
+    {
+      "key": "part1",
+      "title": "FraudSquad 1st place Part 1",
+      "url": "https://www.kaggle.com/c/ieee-fraud-detection/discussion/111284",
+      "access": "public",
+      "review_method": "browser-rendered discussion/writeup main body"
+    },
+    {
+      "key": "cdeotte__xgb-fraud-with-magic-0-9600",
+      "title": "XGB Fraud with Magic 0.9600",
+      "url": "https://www.kaggle.com/cdeotte/xgb-fraud-with-magic-0-9600",
+      "access": "public",
+      "path": "references/winner/cdeotte__xgb-fraud-with-magic-0-9600/xgb-fraud-with-magic-0-9600.ipynb",
+      "sha256": "9b84b66987aba2d273750d299b871d666370079b58c57e34745c0624b3fa118b",
+      "metadata": {
+        "id": "cdeotte/xgb-fraud-with-magic-0-9600",
+        "id_no": 6087563,
+        "title": "XGB Fraud with Magic - [0.9600]",
+        "code_file": "xgb-fraud-with-magic-0-9600.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "business",
+          "xgboost",
+          "seaborn",
+          "pandas",
+          "numpy",
+          "matplotlib"
+        ],
+        "dataset_sources": [
+          "kyakovlev/ieee-submissions-and-uids"
+        ],
+        "kernel_sources": [],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-private-byod/python@sha256:d1ef7c2cb52e49e712389d68215f2aba71de6169388704ed13bfd1937a1d9314",
+        "machine_shape": "NvidiaTeslaK80"
+      }
+    },
+    {
+      "key": "uids",
+      "title": "How to Find UIDs",
+      "url": "https://www.kaggle.com/c/ieee-fraud-detection/discussion/111510",
+      "access": "public",
+      "review_method": "browser-rendered discussion/writeup main body"
+    },
+    {
+      "key": "kyakovlev__ieee-uid-detection-v6",
+      "title": "IEEE UID detection v6",
+      "url": "https://www.kaggle.com/kyakovlev/ieee-uid-detection-v6",
+      "access": "public",
+      "path": "references/winner/kyakovlev__ieee-uid-detection-v6/ieee-uid-detection-v6.ipynb",
+      "sha256": "8e0a24269760675709d689978a1308f4e3b064ccb518534b8398f36c1aa957dc",
+      "metadata": {
+        "id": "kyakovlev/ieee-uid-detection-v6",
+        "id_no": 6073320,
+        "title": "IEEE - uid detection - v6",
+        "code_file": "ieee-uid-detection-v6.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "pandas",
+          "numpy"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [
+          "kyakovlev/ieee-data-minification-private"
+        ],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:85d962b59d0b84b39ccbc3327696bb8790bfb63ba5b837ded2512509103bf426",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "key": "kyakovlev__ieee-basic-fe-part-1",
+      "title": "IEEE Basic FE part 1",
+      "url": "https://www.kaggle.com/kyakovlev/ieee-basic-fe-part-1",
+      "access": "public",
+      "path": "references/winner/kyakovlev__ieee-basic-fe-part-1/ieee-basic-fe-part-1.ipynb",
+      "sha256": "e01b301b93b80586ea95bb2df2a22ee522ba72f9d7f9f487e6c302b03b640136",
+      "metadata": {
+        "id": "kyakovlev/ieee-basic-fe-part-1",
+        "id_no": 6073766,
+        "title": "IEEE - Basic FE - part 1",
+        "code_file": "ieee-basic-fe-part-1.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "pandas",
+          "numpy",
+          "lightgbm",
+          "sklearn"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [
+          "kyakovlev/ieee-data-minification-private"
+        ],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:85d962b59d0b84b39ccbc3327696bb8790bfb63ba5b837ded2512509103bf426",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "key": "kyakovlev__ieee-fe-for-local-test",
+      "title": "IEEE FE for local test",
+      "url": "https://www.kaggle.com/kyakovlev/ieee-fe-for-local-test",
+      "access": "public",
+      "path": "references/winner/kyakovlev__ieee-fe-for-local-test/ieee-fe-for-local-test.ipynb",
+      "sha256": "dfd62b9380a71446443a03f986a4d4c511a9bfbaa01281d30c4e0aad65eebded",
+      "metadata": {
+        "id": "kyakovlev/ieee-fe-for-local-test",
+        "id_no": 5572887,
+        "title": "IEEE - FE for Local test",
+        "code_file": "ieee-fe-for-local-test.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "lightgbm",
+          "matplotlib",
+          "numpy",
+          "pandas",
+          "sklearn"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [
+          "kyakovlev/ieee-data-minification"
+        ],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "key": "alijs1__ieee-transaction-columns-reference",
+      "title": "IEEE Transaction Columns Reference",
+      "url": "https://www.kaggle.com/alijs1/ieee-transaction-columns-reference",
+      "access": "public",
+      "path": "references/winner/alijs1__ieee-transaction-columns-reference/ieee-transaction-columns-reference.ipynb",
+      "sha256": "baa242eac648bbfcd1d0cab13475bb678ba16b715c7f3f8796db23b83fbfc7ac",
+      "metadata": {
+        "id": "alijs1/ieee-transaction-columns-reference",
+        "id_no": 4884993,
+        "title": "IEEE Transaction columns Reference",
+        "code_file": "ieee-transaction-columns-reference.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [],
+        "dataset_sources": [],
+        "kernel_sources": [],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:725469ddf2ad00d5d0ea1bb199314f52a36bef73b0ae7862b63652cd31bf70db",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "key": "cdeotte__eda-for-columns-v-and-id",
+      "title": "EDA for Columns V and ID",
+      "url": "https://www.kaggle.com/cdeotte/eda-for-columns-v-and-id",
+      "access": "public",
+      "path": "references/winner/cdeotte__eda-for-columns-v-and-id/eda-for-columns-v-and-id.ipynb",
+      "sha256": "877d3add19de6384907a8c88c44828ecff048079a13a45edbf0d0efa184644a8",
+      "metadata": {
+        "id": "cdeotte/eda-for-columns-v-and-id",
+        "id_no": 6076741,
+        "title": "EDA for Columns V and ID",
+        "code_file": "eda-for-columns-v-and-id.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "seaborn",
+          "pandas",
+          "numpy",
+          "matplotlib"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:85d962b59d0b84b39ccbc3327696bb8790bfb63ba5b837ded2512509103bf426",
+        "machine_shape": "None"
+      }
+    }
+  ],
+  "extra_input": {
+    "dataset": "kyakovlev/ieee-submissions-and-uids",
+    "version": 2,
+    "url": "https://www.kaggle.com/datasets/kyakovlev/ieee-submissions-and-uids",
+    "role": "published test predictions and UID CSVs; not training OOF",
+    "files": [
+      {
+        "name": "catboost_best_single.csv",
+        "sha256": "c5fce2cb94e834aa1659ac84b2919c797f32ccfc19e917795ec55a1feb5e9647"
+      },
+      {
+        "name": "lgbm_best_single.csv",
+        "sha256": "b0afa3e1f184aec214fb2cc67443f1c1359746a8d9ed0bd2409861d34fc8056c"
+      },
+      {
+        "name": "xgb_best_single.csv",
+        "sha256": "8e4353381747c512329771a95fd425fe7017d4e704ba5c1b244015c5eb17ba8b"
+      },
+      {
+        "name": "uids_v4_no_multiuid_cleaning..csv",
+        "sha256": "166cebfb3dfc25f6b26eb2fc10842d3b10814238fef9da6cc9a727b8418c09fb"
+      },
+      {
+        "name": "uids_v1_no_multiuid_cleaning.csv",
+        "sha256": "4dbf6b01d494a8bd240891fc01df6c2be2e897c3e8d1541684ab2fcbe00eed63"
+      },
+      {
+        "name": "train_uids_full_v3.csv",
+        "sha256": "8b2e4cb31a5ea751b49cb6e79e73b35d307b020049755bb3fa5df092114b5584"
+      },
+      {
+        "name": "test_uids_full_v3.csv",
+        "sha256": "0042e116de698b94febb68eea041918cb059de391d644c69b3b1d526196abfc7"
+      },
+      {
+        "name": "final_model_blend.csv",
+        "sha256": "93445ae4a9513893b3e1ac68b318141ec5110d946367bcc79730f45018ca35b0"
+      },
+      {
+        "name": "lgbm_meta_model.csv",
+        "sha256": "816a44743636ca50d4108ef1f258ccd9a57526da349536e8597d1590ad89faa0"
+      }
+    ]
+  },
+  "additional_winner_resources": [
+    {
+      "url": "https://www.kaggle.com/kyakovlev/ieee-catboost-baseline-with-groupkfold-cv",
+      "path": "references/winner/kyakovlev__ieee-catboost-baseline-with-groupkfold-cv/ieee-catboost-baseline-with-groupkfold-cv.ipynb",
+      "sha256": "7679c48f1181ed2705088b4a8a95cccb7fb78beaeffb58485c3f3bc6f22e4286",
+      "current_version": 4,
+      "is_private": false,
+      "kernel_metadata": {
+        "id": "kyakovlev/ieee-catboost-baseline-with-groupkfold-cv",
+        "id_no": 5618684,
+        "title": "IEEE - Catboost baseline with GroupKFold CV",
+        "code_file": "ieee-catboost-baseline-with-groupkfold-cv.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": true,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "gpu",
+          "sklearn",
+          "pandas",
+          "numpy"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [
+          "kyakovlev/ieee-data-minification",
+          "kyakovlev/ieee-fe-with-some-eda",
+          "kyakovlev/ieee-fe-for-local-test"
+        ],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-private-byod/python@sha256:3e7fc38dcbcf83d721b68c92fb71b291eda2b02b14b749e918a77cde12a7eacd",
+        "machine_shape": "NvidiaTeslaT4"
+      }
+    },
+    {
+      "url": "https://www.kaggle.com/kyakovlev/ieee-lgbm-with-groupkfold-cv",
+      "path": "references/winner/kyakovlev__ieee-lgbm-with-groupkfold-cv/ieee-lgbm-with-groupkfold-cv.ipynb",
+      "sha256": "55a31f7aaba22d2b1ca9fd9656c4e8b017352bb3ffa07edbfec5b802dd433015",
+      "current_version": 2,
+      "is_private": false,
+      "kernel_metadata": {
+        "id": "kyakovlev/ieee-lgbm-with-groupkfold-cv",
+        "id_no": 5594631,
+        "title": " IEEE - Lgbm with GroupKFold CV",
+        "code_file": "ieee-lgbm-with-groupkfold-cv.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "sklearn",
+          "pandas",
+          "numpy",
+          "lightgbm"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [
+          "kyakovlev/ieee-data-minification",
+          "kyakovlev/ieee-fe-with-some-eda",
+          "kyakovlev/ieee-fe-for-local-test"
+        ],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "url": "https://www.kaggle.com/kyakovlev/ieee-fe-with-some-eda",
+      "path": "references/winner/kyakovlev__ieee-fe-with-some-eda/ieee-fe-with-some-eda.ipynb",
+      "sha256": "31e911458d92bbe78a42fac8513cc5d9a26dd7a33b789f190fe575c3f72434c3",
+      "current_version": 1,
+      "is_private": false,
+      "kernel_metadata": {
+        "id": "kyakovlev/ieee-fe-with-some-eda",
+        "id_no": 5547986,
+        "title": "IEEE - FE with some EDA",
+        "code_file": "ieee-fe-with-some-eda.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "matplotlib",
+          "lightgbm",
+          "numpy",
+          "pandas",
+          "sklearn"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [
+          "kyakovlev/ieee-data-minification"
+        ],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "url": "https://www.kaggle.com/kyakovlev/ieee-data-minification",
+      "path": "references/winner/kyakovlev__ieee-data-minification/ieee-data-minification.ipynb",
+      "sha256": "849507c8beb280d644502f7f211e32993e830189b4996fc16a4e460d6fb2f945",
+      "current_version": 7,
+      "is_private": false,
+      "kernel_metadata": {
+        "id": "kyakovlev/ieee-data-minification",
+        "id_no": 5314990,
+        "title": "IEEE Data minification",
+        "code_file": "ieee-data-minification.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "pandas",
+          "numpy"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "url": "https://www.kaggle.com/kyakovlev/ieee-data-minification-private",
+      "path": "references/winner/kyakovlev__ieee-data-minification-private/ieee-data-minification-private.ipynb",
+      "sha256": "b1db4e33f940865aafda0ee5c996e5fae25b35ccfc403559225d2ea18e3ac255",
+      "current_version": 7,
+      "is_private": false,
+      "kernel_metadata": {
+        "id": "kyakovlev/ieee-data-minification-private",
+        "id_no": 5800222,
+        "title": "IEEE - Data Minification Private",
+        "code_file": "ieee-data-minification-private.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "pandas",
+          "numpy"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+        "machine_shape": "None"
+      }
+    },
+    {
+      "url": "https://www.kaggle.com/kyakovlev/ieee-internal-blend",
+      "path": "references/winner/kyakovlev__ieee-internal-blend/ieee-internal-blend.ipynb",
+      "sha256": "8b399f55523a8a09eebade799702a62dfab38def14f22c286aa29e0088d0010a",
+      "current_version": 10,
+      "is_private": false,
+      "kernel_metadata": {
+        "id": "kyakovlev/ieee-internal-blend",
+        "id_no": 5582867,
+        "title": "IEEE - Internal Blend",
+        "code_file": "ieee-internal-blend.ipynb",
+        "language": "python",
+        "kernel_type": "notebook",
+        "is_private": false,
+        "enable_gpu": false,
+        "enable_tpu": false,
+        "enable_internet": false,
+        "keywords": [
+          "pandas"
+        ],
+        "dataset_sources": [],
+        "kernel_sources": [
+          "kyakovlev/ieee-cv-options",
+          "kyakovlev/ieee-simple-lgbm",
+          "kyakovlev/ieee-lgbm-with-groupkfold-cv",
+          "kyakovlev/ieee-catboost-baseline-with-groupkfold-cv"
+        ],
+        "competition_sources": [
+          "ieee-fraud-detection"
+        ],
+        "model_sources": [],
+        "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+        "machine_shape": "None"
+      }
+    }
+  ]
+}

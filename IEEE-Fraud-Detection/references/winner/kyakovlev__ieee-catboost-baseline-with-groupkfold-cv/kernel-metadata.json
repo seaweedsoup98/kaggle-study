@@ -1,0 +1,30 @@
+{
+  "id": "kyakovlev/ieee-catboost-baseline-with-groupkfold-cv",
+  "id_no": 5618684,
+  "title": "IEEE - Catboost baseline with GroupKFold CV",
+  "code_file": "ieee-catboost-baseline-with-groupkfold-cv.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu",
+    "sklearn",
+    "pandas",
+    "numpy"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "kyakovlev/ieee-data-minification",
+    "kyakovlev/ieee-fe-with-some-eda",
+    "kyakovlev/ieee-fe-for-local-test"
+  ],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:3e7fc38dcbcf83d721b68c92fb71b291eda2b02b14b749e918a77cde12a7eacd",
+  "machine_shape": "NvidiaTeslaT4"
+}

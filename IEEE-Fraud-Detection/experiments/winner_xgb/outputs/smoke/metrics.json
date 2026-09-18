@@ -1,0 +1,86 @@
+{
+  "scope": "monthly sampled smoke",
+  "requested_nrows": 30000,
+  "train_rows": 30000,
+  "test_rows": 30002,
+  "folds": 6,
+  "rounds": 100,
+  "local_rounds": 100,
+  "build95": false,
+  "params": {
+    "max_depth": 12,
+    "learning_rate": 0.02,
+    "subsample": 0.8,
+    "colsample_bytree": 0.4,
+    "missing": -1,
+    "eval_metric": "auc",
+    "tree_method": "hist",
+    "device": "cuda",
+    "n_jobs": 8,
+    "random_state": 0
+  },
+  "results": {
+    "xgb96": {
+      "features": 263,
+      "local_auc": 0.8609629825673552,
+      "oof_auc": 0.862224886856649,
+      "folds": [
+        {
+          "fold": 0,
+          "months": [
+            12
+          ],
+          "auc": 0.8183254778780242,
+          "best_iteration": 89
+        },
+        {
+          "fold": 1,
+          "months": [
+            15
+          ],
+          "auc": 0.8813749997720854,
+          "best_iteration": 99
+        },
+        {
+          "fold": 2,
+          "months": [
+            13
+          ],
+          "auc": 0.848889849167644,
+          "best_iteration": 98
+        },
+        {
+          "fold": 3,
+          "months": [
+            17
+          ],
+          "auc": 0.8898263989913683,
+          "best_iteration": 88
+        },
+        {
+          "fold": 4,
+          "months": [
+            14
+          ],
+          "auc": 0.90046918767507,
+          "best_iteration": 96
+        },
+        {
+          "fold": 5,
+          "months": [
+            16
+          ],
+          "auc": 0.884413392172305,
+          "best_iteration": 84
+        }
+      ]
+    }
+  },
+  "pp_coverage": [],
+  "elapsed_seconds": 17.671165900304914,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "xgboost": "3.4.1"
+  }
+}

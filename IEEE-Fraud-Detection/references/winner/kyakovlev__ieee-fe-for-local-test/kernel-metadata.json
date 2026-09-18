@@ -1,0 +1,29 @@
+{
+  "id": "kyakovlev/ieee-fe-for-local-test",
+  "id_no": 5572887,
+  "title": "IEEE - FE for Local test",
+  "code_file": "ieee-fe-for-local-test.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "lightgbm",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "sklearn"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "kyakovlev/ieee-data-minification"
+  ],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+  "machine_shape": "None"
+}

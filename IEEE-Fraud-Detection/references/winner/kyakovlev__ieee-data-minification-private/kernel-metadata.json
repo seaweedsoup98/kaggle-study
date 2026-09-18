@@ -1,0 +1,24 @@
+{
+  "id": "kyakovlev/ieee-data-minification-private",
+  "id_no": 5800222,
+  "title": "IEEE - Data Minification Private",
+  "code_file": "ieee-data-minification-private.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "pandas",
+    "numpy"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+  "machine_shape": "None"
+}

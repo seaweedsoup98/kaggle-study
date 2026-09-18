@@ -1,0 +1,21 @@
+{
+  "id": "alijs1/ieee-transaction-columns-reference",
+  "id_no": 4884993,
+  "title": "IEEE Transaction columns Reference",
+  "code_file": "ieee-transaction-columns-reference.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:725469ddf2ad00d5d0ea1bb199314f52a36bef73b0ae7862b63652cd31bf70db",
+  "machine_shape": "None"
+}

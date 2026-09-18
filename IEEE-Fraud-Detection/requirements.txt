@@ -1,0 +1,15 @@
+numpy>=2.0,<3
+pandas>=2.2,<4
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+joblib>=1.4,<2
+lightgbm>=4,<5
+xgboost>=3,<4
+catboost>=1.2,<2
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+kagglehub>=1,<2
+kaggle>=2,<3
+jupyter>=1,<2
+nbformat>=5,<6
+nbclient>=0.10,<1

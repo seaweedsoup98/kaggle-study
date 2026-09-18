@@ -1,0 +1,30 @@
+{
+  "id": "cdeotte/xgb-fraud-with-magic-0-9600",
+  "id_no": 6087563,
+  "title": "XGB Fraud with Magic - [0.9600]",
+  "code_file": "xgb-fraud-with-magic-0-9600.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "business",
+    "xgboost",
+    "seaborn",
+    "pandas",
+    "numpy",
+    "matplotlib"
+  ],
+  "dataset_sources": [
+    "kyakovlev/ieee-submissions-and-uids"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:d1ef7c2cb52e49e712389d68215f2aba71de6169388704ed13bfd1937a1d9314",
+  "machine_shape": "NvidiaTeslaK80"
+}

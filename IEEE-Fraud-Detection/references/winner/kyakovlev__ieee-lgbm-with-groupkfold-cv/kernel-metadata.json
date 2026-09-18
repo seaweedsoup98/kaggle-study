@@ -1,0 +1,30 @@
+{
+  "id": "kyakovlev/ieee-lgbm-with-groupkfold-cv",
+  "id_no": 5594631,
+  "title": " IEEE - Lgbm with GroupKFold CV",
+  "code_file": "ieee-lgbm-with-groupkfold-cv.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "sklearn",
+    "pandas",
+    "numpy",
+    "lightgbm"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "kyakovlev/ieee-data-minification",
+    "kyakovlev/ieee-fe-with-some-eda",
+    "kyakovlev/ieee-fe-for-local-test"
+  ],
+  "competition_sources": [
+    "ieee-fraud-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:a186e97ff14f3729aa3c023f9e7a538d762080038a6f09ed4f2256baf107daa2",
+  "machine_shape": "None"
+}

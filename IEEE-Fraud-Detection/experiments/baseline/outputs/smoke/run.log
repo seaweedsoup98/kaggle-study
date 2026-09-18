@@ -1,0 +1,16 @@
+train=30000, test=30000, NROWS=30000, folds=2, rounds=100
+source commit=fef0b14cc3fb392a4b27c6ba77058b6a6e7f1ed1
+LDA: card1/addr1, groups=5457, vocabulary=182
+LDA: card1/id_20, groups=2379, vocabulary=174
+NMF: card4/DeviceInfo_c, groups=4, vocabulary=15
+Features prepared: train=(30000, 603), test=(30000, 603), elapsed=10.4s
+Products=['W'], train=21173, test=25300, features=313
+Products=['W'], fold=1, AUC=0.848219, best_iteration=100
+Products=['W'], fold=2, AUC=0.884213, best_iteration=99
+Products=['W'], OOF AUC=0.865048
+Products=['H', 'C', 'S', 'R'], train=8827, test=4700, features=563
+Products=['H', 'C', 'S', 'R'], fold=1, AUC=0.958338, best_iteration=100
+Products=['H', 'C', 'S', 'R'], fold=2, AUC=0.949760, best_iteration=100
+Products=['H', 'C', 'S', 'R'], OOF AUC=0.953936
+Pooled OOF AUC=0.894789
+Saved: C:\Users\jiho\code\kaggle-study\IEEE-Fraud-Detection\experiments\baseline\outputs\smoke; predictions=sample_predictions.csv; elapsed=15.5s

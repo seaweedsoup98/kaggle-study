@@ -1,0 +1,9 @@
+FE train=(30000, 790) test=(30002, 790) monthly rows={12: 6976, 13: 4703, 14: 4370, 15: 5163, 16: 4250, 17: 4538}
+features=720 categorical=144 params={'iterations': 100, 'learning_rate': 0.07, 'eval_metric': 'AUC', 'loss_function': 'Logloss', 'random_seed': 42, 'metric_period': 500, 'od_wait': 500, 'task_type': 'GPU', 'depth': 8, 'thread_count': 8}
+fold=0 months=[12] AUC=0.810771 best_iteration=99
+fold=1 months=[15] AUC=0.868992 best_iteration=98
+fold=2 months=[13] AUC=0.856963 best_iteration=99
+fold=3 months=[17] AUC=0.865869 best_iteration=83
+fold=4 months=[14] AUC=0.892527 best_iteration=99
+fold=5 months=[16] AUC=0.889058 best_iteration=55
+OOF AUC=0.857846 source-scaled AUC=0.858157 elapsed=42.8s

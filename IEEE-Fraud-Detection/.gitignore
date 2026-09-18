@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+data/raw/
+data/data_path.txt
+experiments/**/outputs/**/*.npy
+experiments/**/outputs/**/*.csv
+experiments/**/outputs/**/*.txt
+experiments/**/outputs/**/catboost_info/

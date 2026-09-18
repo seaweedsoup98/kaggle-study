@@ -1,0 +1,31 @@
+{
+  "scope": "released predictions only; no model training",
+  "dataset": "kyakovlev/ieee-submissions-and-uids/versions/2",
+  "rows": 506691,
+  "inputs": [
+    "catboost_best_single.csv",
+    "lgbm_best_single.csv",
+    "xgb_best_single.csv"
+  ],
+  "weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "pp_coverage": [
+    {
+      "file": "uids_v4_no_multiuid_cleaning..csv",
+      "test_coverage": 0.693349595710206
+    },
+    {
+      "file": "uids_v1_no_multiuid_cleaning.csv",
+      "test_coverage": 0.7194838668932347
+    }
+  ],
+  "difference_to_released_final": {
+    "mean_absolute": 0.003512858292503631,
+    "max_absolute": 0.3330952415184279
+  },
+  "auc": null,
+  "elapsed_seconds": 3.8335561002604663
+}
